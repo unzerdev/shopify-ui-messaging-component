@@ -1,0 +1,178 @@
+/* Installment Widget Integration Styles */
+
+.installment-widget-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unzer-spacing, 16px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--unzer-spacing, 16px);
+}
+
+.config-panel {
+  display: grid;
+  gap: var(--unzer-spacing-lg, 24px);
+  margin-bottom: var(--unzer-spacing-lg, 24px);
+  padding: var(--unzer-spacing-lg, 24px);
+  background: var(--unzer-color-background, #f8f9fa);
+  border: var(--unzer-installments-border-width, var(--unzer-border-width, 1px)) solid var(--unzer-installments-border-color, var(--unzer-color-border, #e0e0e0));
+  border-radius: var(--unzer-border-radius, 8px);
+}
+
+@media (min-width: 768px) {
+  .config-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.widget-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unzer-spacing, 16px);
+  background: var(--unzer-background-color, #ffffff);
+  border: var(--unzer-installments-border-width, var(--unzer-border-width, 1px)) solid var(--unzer-installments-border-color, var(--unzer-color-border, #e0e0e0));
+  border-radius: var(--unzer-border-radius, 8px);
+  padding: var(--unzer-spacing, 16px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.widget-header {
+  text-align: center;
+  margin-bottom: var(--unzer-spacing, 16px);
+}
+
+.widget-title {
+  margin: 0 0 var(--unzer-spacing-sm, 8px) 0;
+  font-size: calc(var(--unzer-font-size, 14px) * 1.5);
+  font-weight: var(--unzer-font-weight-bold, 600);
+  color: var(--unzer-color-text, #333333);
+  font-family: var(--unzer-font-family, system-ui, sans-serif);
+}
+
+.widget-subtitle {
+  margin: 0;
+  font-size: var(--unzer-font-size, 14px);
+  color: var(--unzer-color-text-secondary, #666666);
+  font-family: var(--unzer-font-family, system-ui, sans-serif);
+}
+
+.main-plans {
+  flex: 1;
+  min-height: 200px;
+}
+
+.widget-footer {
+  text-align: center;
+  padding-top: var(--unzer-spacing, 16px);
+  border-top: 1px solid var(--unzer-color-border, #e0e0e0);
+  margin-top: var(--unzer-spacing, 16px);
+}
+
+.widget-footer small {
+  font-size: calc(var(--unzer-font-size, 14px) * 0.8);
+  color: var(--unzer-color-text-secondary, #666666);
+  font-family: var(--unzer-font-family, system-ui, sans-serif);
+}
+
+.debug-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--unzer-spacing-sm, 8px);
+  padding: var(--unzer-spacing, 16px);
+  background: var(--unzer-color-info-light, #e3f2fd);
+  border: var(--unzer-installments-border-width, var(--unzer-border-width, 1px)) solid var(--unzer-installments-border-color, var(--unzer-color-info, #2196f3));
+  border-radius: var(--unzer-border-radius, 8px);
+}
+
+/* Dependency guard debug styles */
+dependency-guard[debug] {
+  position: relative;
+  border: calc(var(--unzer-installments-border-width, var(--unzer-border-width, 1px)) * 2) dashed var(--unzer-installments-border-color, var(--unzer-color-info, #2196f3));
+  border-radius: var(--unzer-border-radius-sm, 4px);
+  padding: var(--unzer-spacing-xs, 4px);
+  margin: var(--unzer-spacing-xs, 4px);
+}
+
+dependency-guard[debug]::before {
+  content: attr(component);
+  position: absolute;
+  top: -12px;
+  left: var(--unzer-spacing-xs, 4px);
+  background: var(--unzer-color-info, #2196f3);
+  color: white;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-family: monospace;
+}
+
+dependency-guard.dependency-disabled {
+  opacity: 0.3;
+  border-color: var(--unzer-installments-border-color, var(--unzer-color-error, #f44336));
+  pointer-events: none;
+}
+
+dependency-guard.dependency-disabled::before {
+  background: var(--unzer-color-error, #f44336);
+  content: attr(component) " (disabled)";
+}
+
+dependency-guard.dependency-conflict {
+  border-color: var(--unzer-installments-border-color, var(--unzer-color-warning, #ff9800));
+}
+
+dependency-guard.dependency-conflict::before {
+  background: var(--unzer-color-warning, #ff9800);
+  content: attr(component) " (conflict)";
+}
+
+/* Theme support */
+:host([theme="dark"]) .installment-widget-container {
+  --unzer-background-color: #1a1a1a;
+  --unzer-color-text: #ffffff;
+  --unzer-color-text-secondary: #cccccc;
+  --unzer-color-border: #404040;
+  color: var(--unzer-color-text);
+}
+
+:host([theme="dark"]) .config-panel {
+  background: var(--unzer-color-surface-dark, #2a2a2a);
+  border-color: var(--unzer-installments-border-color, var(--unzer-color-border-dark, #404040));
+}
+
+:host([theme="dark"]) .widget-content {
+  background: var(--unzer-background-color);
+  border-color: var(--unzer-installments-border-color, var(--unzer-color-border));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .installment-widget-container {
+    padding: var(--unzer-spacing-sm, 8px);
+  }
+  
+  .widget-content {
+    padding: var(--unzer-spacing-sm, 8px);
+  }
+  
+  .widget-title {
+    font-size: calc(var(--unzer-font-size, 14px) * 1.2);
+  }
+}
+
+/* Animation for config panel */
+.config-panel {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

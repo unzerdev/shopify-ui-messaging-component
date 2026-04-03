@@ -1,0 +1,240 @@
+/* ⚡ @property definitions now centralized in installment-variables.css */
+
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-family: var(--unzer-installments-font-family);
+}
+
+.payment-timeline {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: visible;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-left: 0;
+  padding: 4px 0;
+}
+
+/* No scroll when ≤3 items — fit all content */
+.payment-timeline.fit-content {
+  overflow-x: hidden;
+}
+
+.payment-timeline.fit-content .timeline-container {
+  width: 100%;
+  min-width: 0;
+  justify-content: center;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* Make container wide enough with extra space for scrolling */
+  width: max-content;
+  min-width: 100%;
+  padding: var(--unzer-installments-spacing, 16px) 0;
+  gap: var(--unzer-installments-spacing-sm, 8px);
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* When content has many items, allow natural overflow */
+.timeline-container.has-many-items {
+  width: auto;
+  min-width: auto;
+  justify-content: flex-start;
+}
+
+/* When content fits, center it */
+@media (min-width: 640px) {
+  .timeline-container:not(.has-many-items) {
+    justify-content: center;
+  }
+}
+
+/* Timeline item styles */
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 80px;
+  width: auto;
+  max-width: 120px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 var(--unzer-installments-spacing-xs, 4px);
+}
+
+/* First timeline item - absolutely ensure visibility */
+.timeline-item:first-child {
+  min-width: auto;
+  max-width: 120px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Last item gets extra padding to allow full scroll */
+.timeline-item:last-child {
+  padding-right: var(--unzer-installments-spacing, 16px);
+  margin-right: var(--unzer-installments-spacing-xs, 4px);
+}
+
+.timeline-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  width: 20px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.dots {
+  color: var(--unzer-installments-text-color, #d1d5db);
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: var(--unzer-installments-font-size-sm, 12px);
+  opacity: 0.6;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #bdbdbd;
+  border: 2px solid var(--unzer-installments-background-color, #ffffff);
+  position: relative;
+  z-index: 2;
+  margin-bottom: var(--unzer-installments-spacing-xs, 4px);
+  flex-shrink: 0;
+}
+
+.timeline-dot.active {
+  background: var(--unzer-installments-primary-color, #e91e63);
+  border-color: var(--unzer-installments-background-color, #ffffff);
+}
+
+.timeline-date {
+  font-weight: 600;
+  font-size: var(--unzer-installments-font-size, 13px);
+  color: #000000;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--unzer-installments-font-family);
+}
+
+.timeline-item.active .timeline-date {
+  color: #000000;
+  font-size: var(--unzer-installments-font-size, 13px);
+  font-weight: 600;
+}
+
+.no-dates {
+  text-align: center;
+  padding: var(--unzer-installments-spacing, 16px);
+  color: var(--unzer-installments-text-color, #6b7280);
+  font-style: italic;
+  font-size: var(--unzer-installments-font-size, 14px);
+  font-family: var(--unzer-installments-font-family);
+  opacity: 0.7;
+}
+
+/* Enhanced scrollbar styling for timeline */
+.payment-timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.payment-timeline::-webkit-scrollbar-track {
+  background: var(--unzer-installments-background-color, #f8fafc);
+  border-radius: var(--unzer-installments-border-radius, 4px);
+  margin: 0 var(--unzer-installments-spacing-sm, 8px);
+}
+
+.payment-timeline::-webkit-scrollbar-thumb {
+  background: var(--unzer-installments-border-color, #e2e8f0);
+  border-radius: var(--unzer-installments-border-radius, 4px);
+  border: 1px solid var(--unzer-installments-background-color, #f1f5f9);
+}
+
+.payment-timeline::-webkit-scrollbar-thumb:hover {
+  background: var(--unzer-installments-secondary-color, #cbd5e1);
+}
+
+.payment-timeline::-webkit-scrollbar-thumb:active {
+  background: var(--unzer-installments-primary-color, #94a3b8);
+}
+
+/* Firefox scrollbar */
+.payment-timeline {
+  scrollbar-width: thin;
+  scrollbar-color: var(--unzer-installments-border-color, #e2e8f0) var(--unzer-installments-background-color, #f8fafc);
+}
+
+/* Enhanced responsive design - Mobile first approach */
+@media (max-width: 480px) {
+  .timeline-container {
+    padding: var(--unzer-installments-spacing-sm, 8px) 0;
+    gap: var(--unzer-installments-spacing-xs, 4px);
+  }
+
+  .timeline-separator {
+    min-width: 16px;
+    width: 16px;
+    margin: 0 var(--unzer-installments-spacing-xs, 2px);
+  }
+
+  .timeline-item {
+    min-width: 70px;
+    max-width: 100px;
+    padding: 0 var(--unzer-installments-spacing-xs, 2px);
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    margin-bottom: var(--unzer-installments-spacing-xs, 2px);
+  }
+
+  .dots {
+    font-size: var(--unzer-installments-font-size-xs, 10px);
+    letter-spacing: 1px;
+  }
+
+  .timeline-date {
+    font-size: var(--unzer-installments-font-size-xs, 9px);
+  }
+}
+
+@media (max-width: 320px) {
+  .timeline-item {
+    min-width: 60px;
+    max-width: 80px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-date {
+    font-size: var(--unzer-installments-font-size-xs, 8px);
+  }
+
+  .dots {
+    font-size: var(--unzer-installments-font-size-xs, 8px);
+  }
+}

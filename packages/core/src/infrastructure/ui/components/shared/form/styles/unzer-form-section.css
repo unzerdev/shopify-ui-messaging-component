@@ -1,0 +1,192 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.form-section {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.form-section:last-child,
+:host(:last-child) .form-section {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Header */
+.section-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-title {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1f36;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7c93;
+}
+
+.section-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.section-description {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7c93;
+  line-height: 1.5;
+}
+
+.section-actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Collapsible functionality */
+.section-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #6b7c93;
+  transition: transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.section-toggle:hover {
+  background-color: #f1f5f9;
+  color: #374151;
+}
+
+.section-toggle.collapsed {
+  transform: rotate(-90deg);
+}
+
+.section-toggle svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* Content */
+.section-content {
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.section-content.collapsed {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+/* Grid layouts for common form patterns */
+:host([layout='grid-2']) ::slotted(*) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+:host([layout='grid-3']) ::slotted(*) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+:host([layout='grid-4']) ::slotted(*) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* Required indicator */
+.required-indicator {
+  color: #f56565;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+/* Disabled state */
+:host([disabled]) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+:host([disabled]) .section-title {
+  color: #9ca3af;
+}
+
+:host([disabled]) .section-description {
+  color: #d1d5db;
+}
+
+/* Focus management */
+.section-toggle:focus-visible {
+  outline: 2px solid #635bff;
+  outline-offset: 2px;
+}
+
+/* Compact variant */
+:host([variant='compact']) .form-section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+}
+
+:host([variant='compact']) .section-header {
+  margin-bottom: 12px;
+}
+
+:host([variant='compact']) .section-title {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+:host([variant='compact']) .section-description {
+  font-size: 13px;
+}
+
+/* Spacious variant */
+:host([variant='spacious']) .form-section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+}
+
+:host([variant='spacious']) .section-header {
+  margin-bottom: 28px;
+}

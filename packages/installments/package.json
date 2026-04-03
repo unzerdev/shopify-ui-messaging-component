@@ -1,0 +1,22 @@
+{
+  "name": "@unzer/messaging-installments",
+  "version": "1.0.0",
+  "description": "Unzer Installments Messaging Widget",
+  "type": "module",
+  "main": "dist/unzer-installments.es.js",
+  "module": "dist/unzer-installments.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/unzer-installments.es.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@unzer/messaging-core": "*"
+  }
+}

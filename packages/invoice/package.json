@@ -1,0 +1,22 @@
+{
+  "name": "@unzer/messaging-invoice",
+  "version": "1.0.0",
+  "description": "Unzer Invoice Messaging Widget",
+  "type": "module",
+  "main": "dist/unzer-invoice.es.js",
+  "module": "dist/unzer-invoice.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/unzer-invoice.es.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@unzer/messaging-core": "*"
+  }
+}

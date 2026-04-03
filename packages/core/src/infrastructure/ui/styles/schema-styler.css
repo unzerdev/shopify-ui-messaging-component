@@ -1,0 +1,150 @@
+/* Schema Styler Styles */
+
+.schema-styler {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unzer-spacing-lg, 24px);
+  padding: var(--unzer-spacing-lg, 24px);
+  background: var(--unzer-color-background, #f8f9fa);
+  border-radius: var(--unzer-border-radius, 4px);
+}
+
+.schema-styler-empty,
+.schema-styler-loading {
+  padding: var(--unzer-spacing-xl, 32px);
+  text-align: center;
+  color: var(--unzer-color-text-secondary, #666666);
+  font-style: italic;
+  background: var(--unzer-color-surface, #ffffff);
+  border: 1px solid var(--unzer-color-border, #e0e0e0);
+  border-radius: var(--unzer-border-radius, 4px);
+}
+
+.schema-styler-errors {
+  padding: var(--unzer-spacing-md, 16px);
+  background: var(--unzer-color-error-light, #ffebee);
+  border: 1px solid var(--unzer-color-error, #f44336);
+  border-radius: var(--unzer-border-radius, 4px);
+  color: var(--unzer-color-error-dark, #c62828);
+}
+
+.schema-styler-errors h4 {
+  margin: 0 0 var(--unzer-spacing-sm, 8px) 0;
+  font-size: var(--unzer-font-size-md, 16px);
+  font-weight: var(--unzer-font-weight-medium, 500);
+}
+
+.schema-styler-errors ul {
+  margin: 0;
+  padding-left: var(--unzer-spacing-md, 16px);
+}
+
+.schema-styler-errors li {
+  margin-bottom: var(--unzer-spacing-xs, 4px);
+  font-size: var(--unzer-font-size-sm, 14px);
+}
+
+.schema-styler-debug {
+  background: var(--unzer-color-info-light, #e3f2fd);
+  border: 1px solid var(--unzer-color-info, #2196f3);
+  border-radius: var(--unzer-border-radius, 4px);
+  padding: var(--unzer-spacing-md, 16px);
+}
+
+.schema-styler-debug details {
+  cursor: pointer;
+}
+
+.schema-styler-debug summary {
+  font-weight: var(--unzer-font-weight-medium, 500);
+  color: var(--unzer-color-info-dark, #1976d2);
+  padding: var(--unzer-spacing-xs, 4px) 0;
+}
+
+.debug-content {
+  margin-top: var(--unzer-spacing-sm, 8px);
+  padding-top: var(--unzer-spacing-sm, 8px);
+  border-top: 1px solid var(--unzer-color-info, #2196f3);
+}
+
+.debug-content h5 {
+  margin: var(--unzer-spacing-md, 16px) 0 var(--unzer-spacing-xs, 4px) 0;
+  font-size: var(--unzer-font-size-sm, 14px);
+  font-weight: var(--unzer-font-weight-medium, 500);
+  color: var(--unzer-color-info-dark, #1976d2);
+}
+
+.debug-content pre {
+  background: var(--unzer-color-surface, #ffffff);
+  border: 1px solid var(--unzer-color-border, #e0e0e0);
+  border-radius: var(--unzer-border-radius-sm, 2px);
+  padding: var(--unzer-spacing-sm, 8px);
+  font-size: var(--unzer-font-size-xs, 12px);
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.schema-styler-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unzer-spacing-md, 16px);
+}
+
+.schema-styler-actions {
+  display: flex;
+  gap: var(--unzer-spacing-sm, 8px);
+  padding: var(--unzer-spacing-md, 16px);
+  background: var(--unzer-color-surface, #ffffff);
+  border: 1px solid var(--unzer-color-border, #e0e0e0);
+  border-radius: var(--unzer-border-radius, 4px);
+  margin-top: auto;
+}
+
+.schema-styler-actions unzer-button {
+  min-width: 120px;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .schema-styler {
+    padding: var(--unzer-spacing-xl, 32px);
+  }
+  
+  .schema-styler-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--unzer-spacing-lg, 24px);
+  }
+  
+  .schema-styler-content > * {
+    grid-column: span 1;
+  }
+  
+  /* Full width for certain elements */
+  .schema-styler-content > dependency-guard,
+  .schema-styler-content > config-guard {
+    grid-column: span 2;
+  }
+}
+
+/* Dark theme support */
+:host([theme="dark"]) .schema-styler {
+  background: var(--unzer-color-background-dark, #1a1a1a);
+  color: var(--unzer-color-text-dark, #ffffff);
+}
+
+:host([theme="dark"]) .schema-styler-empty,
+:host([theme="dark"]) .schema-styler-loading,
+:host([theme="dark"]) .schema-styler-actions {
+  background: var(--unzer-color-surface-dark, #2a2a2a);
+  border-color: var(--unzer-color-border-dark, #404040);
+  color: var(--unzer-color-text-dark, #ffffff);
+}
+
+:host([theme="dark"]) .debug-content pre {
+  background: var(--unzer-color-surface-dark, #2a2a2a);
+  border-color: var(--unzer-color-border-dark, #404040);
+  color: var(--unzer-color-text-dark, #ffffff);
+}

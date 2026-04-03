@@ -1,0 +1,515 @@
+/* ============================================
+ * CONSOLIDATED NAVIGATION STYLES
+ * Combines: arrows, buttons, and select navigation
+ * ============================================ */
+
+/* ⚡ @property definitions now centralized in installment-variables.css */
+
+/* ========== NAVIGATION CONTAINER STYLES ========== */
+:host {
+  display: block;
+  width: 100%;
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family));
+
+  /* Inherit installment-specific CSS custom properties */
+  color: var(--unzer-installments-text-color, inherit);
+  font-size: var(--unzer-installments-font-size, inherit);
+  font-weight: var(--unzer-installments-font-weight, inherit);
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  gap: var(--unzer-installments-spacing, var(--unzer-spacing, 8px));
+  justify-content: flex-start;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.navigation-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.navigation-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: var(--unzer-border-radius);
+}
+
+.navigation-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: var(--unzer-border-radius);
+  box-shadow: 0 1px 3px rgba(99, 102, 241, 0.3);
+}
+
+.navigation-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.4);
+}
+
+.navigation-content {
+  display: flex;
+  align-items: center;
+  gap: var(--unzer-spacing, 8px);
+  flex-shrink: 0;
+  order: 0;
+}
+
+unzer-logo {
+  flex-shrink: 0;
+  display: flex;
+  order: 1;
+}
+
+unzer-logo.logo-left {
+  order: -2;
+}
+
+unzer-installment-info-button {
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.unzer-logo svg {
+  height: 20px;
+  width: auto;
+}
+
+/* ========== AMOUNT LABEL ========== */
+.amount-label {
+  font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 11px));
+  font-weight: var(--unzer-installments-font-weight, var(--unzer-font-weight, 400));
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family, inherit));
+  color: var(--unzer-installments-text-color, var(--unzer-text-color, #000000));
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* ========== TEXT LAYOUT STYLES ========== */
+.text-layout {
+  font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 11px));
+  font-weight: var(--unzer-installments-font-weight, var(--unzer-font-weight, 400));
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family, inherit));
+  color: var(--unzer-installments-text-color, var(--unzer-text-color, #000000));
+  line-height: 16px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.text-layout strong {
+  font-weight: var(--unzer-installments-font-weight, var(--unzer-font-weight, 400));
+}
+
+.text-layout unzer-installment-info-button {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+/* ========== BASE CONTAINER STYLES ========== */
+.arrow-navigation,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  height: auto;
+  font-family: var(--unzer-font-family);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Buttons navigation specific */
+.container {
+  position: relative;
+}
+
+/* Empty state */
+.container.empty {
+  justify-content: center;
+  font-style: italic;
+}
+
+/* ========== ARROW NAVIGATION SPECIFIC ========== */
+.arrow-button {
+  width: var(--unzer-installments-font-size, 14px);
+  height: var(--unzer-installments-font-size, 14px);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--unzer-installments-arrows-color, var(--unzer-installments-text-color, #F21C58));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: var(--unzer-installments-font-size, 14px);
+  line-height: 1;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.arrow-button:hover {
+  opacity: 0.6;
+}
+
+.arrow-button:disabled {
+  color: var(--unzer-installments-text-color, #E0E0E0);
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.arrow-button:disabled:hover {
+  opacity: 0.3;
+}
+
+.plan-info {
+  text-align: center;
+  font-weight: var(--unzer-installments-font-weight, 400);
+  line-height: 1;
+  color: var(--unzer-installments-text-color, #000000);
+  font-size: var(--unzer-installments-font-size, 11px);
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family));
+  max-width: 100%;
+  flex: 1;
+  padding: 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== BUTTONS NAVIGATION SPECIFIC ========== */
+.buttons-container {
+  display: flex;
+  gap: var(--unzer-installments-spacing, 4px);
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Plan button styles — per styleGuids.md */
+.plan-button {
+  background: transparent;
+  border: 1px solid var(--unzer-installments-default-button-color, #9C9C9C);
+  border-radius: var(--unzer-installments-border-radius, 3px);
+  font-size: var(--unzer-installments-font-size, 11px);
+  font-weight: var(--unzer-installments-font-weight, 400);
+  font-family: var(--unzer-installments-font-family);
+  line-height: var(--unzer-installments-line-height, 1);
+  color: var(--unzer-installments-default-button-color);
+  cursor: pointer;
+  min-width: max(25px, 2.3em);
+  min-height: max(21px, 1.9em);
+  padding: 2px 4px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+  scroll-snap-align: start;
+}
+
+.plan-button:hover {
+  border-color: var(--unzer-installments-selected-button-color, #F21C58);
+  color: var(--unzer-installments-selected-button-color, #F21C58);
+  background: color-mix(in srgb, var(--unzer-installments-selected-button-color, #F21C58) 20%, transparent);
+}
+
+.plan-button:focus {
+  outline: none;
+  border-color: var(--unzer-installments-selected-button-color, #F21C58);
+}
+
+.plan-button.selected {
+  border: 1px solid var(--unzer-installments-selected-button-color, #F21C58);
+  border-radius: var(--unzer-installments-border-radius, 3px);
+  color: var(--unzer-installments-selected-button-color, #F21C58);
+  width: 25px;
+  height: 21px;
+  background: color-mix(in srgb, var(--unzer-installments-selected-button-color, #F21C58) 20%, transparent);
+  font-weight: var(--unzer-installments-font-weight, 400);
+}
+
+/* ========== SELECT NAVIGATION SPECIFIC ========== */
+.dropdown {
+  appearance: none;
+  background-color: var(--unzer-installments-background-color, #FFFFFF);
+  border: 1px solid var(--unzer-installments-border-color, var(--unzer-border-color, #e5e7eb));
+  border-radius: var(--unzer-installments-border-radius, 3px);
+  padding: 1px 16px 1px 7px;
+  font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 14px)) !important;
+  font-weight: var(--unzer-installments-font-weight, var(--unzer-font-weight, 400));
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family, system-ui));
+  line-height: var(--unzer-line-height, 1.4);
+  color: var(--unzer-installments-text-color, var(--unzer-text-color, var(--unzer-color-text-primary, #374151))) !important;
+  cursor: pointer;
+  max-width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+
+  /* Simple dropdown arrow */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23374151' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 6px center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+}
+
+/* Style option elements explicitly */
+.dropdown option {
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family, system-ui));
+  font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 14px)) !important;
+  font-weight: var(--unzer-installments-font-weight, var(--unzer-font-weight, 400));
+  color: var(--unzer-installments-text-color, var(--unzer-text-color, var(--unzer-color-text-primary, #374151))) !important;
+  background-color: var(--unzer-installments-background-color, #FFFFFF);
+  padding: 4px 8px;
+}
+
+.dropdown:hover {
+  border-color: var(--unzer-installments-border-color, var(--unzer-border-color, #d1d5db));
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: var(--unzer-installments-primary-color, var(--unzer-color-primary, #2563eb));
+}
+
+/* ========== INFO BUTTON STYLES ========== */
+unzer-installment-info-button {
+  flex-shrink: 0;
+}
+
+/* For navigation-content context */
+.navigation-content unzer-installment-info-button {
+  flex-shrink: 0;
+}
+
+/* For different navigation types */
+.arrow-navigation unzer-installment-info-button,
+.buttons-container unzer-installment-info-button,
+.container unzer-installment-info-button {
+  flex-shrink: 0;
+}
+
+/* ========== RESPONSIVE STYLES - 480px ========== */
+@media (max-width: 480px) {
+  /* Common responsive styles */
+  .arrow-navigation,
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    min-height: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Buttons navigation specific */
+  .container {
+    padding: var(--plans-container-padding, 0);
+    align-items: center;
+    position: relative;
+  }
+
+  /* Common amount label responsive */
+  .amount-label {
+    font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 14px)) !important;
+    color: var(--unzer-installments-text-color, var(--unzer-text-color, var(--unzer-color-text-primary))) !important;
+    order: -1;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: auto;
+    background: transparent;
+    border-radius: 0;
+    position: static;
+    z-index: auto;
+    box-shadow: none;
+    box-sizing: border-box;
+    min-width: fit-content;
+    flex-shrink: 0;
+  }
+
+  /* Arrow navigation specific */
+  .arrow-button {
+    width: 20px;
+    height: 20px;
+    font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 14px));
+  }
+
+  .plan-info {
+    font-size: var(--unzer-font-size-sm, 13px);
+    padding: 0 4px;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+
+  /* Buttons container responsive */
+  .buttons-container {
+    gap: var(--unzer-spacing, 4px);
+    order: 2;
+    justify-content: flex-start;
+    padding: var(--buttons-container-scroll-padding, 4px 4px 4px 4px);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-left: 0;
+    scroll-padding-left: var(--buttons-container-scroll-padding, 8px);
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.8) transparent;
+    position: relative;
+  }
+
+  .buttons-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .buttons-container::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.8);
+    border-radius: 2px;
+  }
+
+  .buttons-container::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.8);
+    border-radius: 2px;
+  }
+
+  .buttons-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, 0.9);
+  }
+
+  /* Button styles responsive */
+  .plan-button {
+    font-size: var(--unzer-font-size-sm, 13px);
+    flex-shrink: 0;
+  }
+
+  .plan-button:first-child {
+    margin-left: 2px;
+  }
+
+  .plan-button:last-child {
+    margin-right: 4px;
+  }
+
+  /* ⚡ Removed mobile unzer-button overrides - using native buttons */
+
+  /* Select dropdown responsive */
+  .dropdown {
+    font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 13px)) !important;
+    min-width: 90px;
+    order: 2;
+  }
+}
+
+/* ========== RESPONSIVE STYLES - 360px ========== */
+@media (max-width: 360px) {
+  .arrow-navigation,
+  .container {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container {
+    gap: var(--unzer-spacing, 4px);
+    padding: 0;
+    position: relative;
+  }
+
+  .amount-label {
+    font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 14px)) !important;
+    color: var(--unzer-installments-text-color, var(--unzer-text-color, var(--unzer-color-text-primary))) !important;
+    padding: 0;
+    margin: 0;
+    position: static;
+    flex-shrink: 0;
+    z-index: auto;
+    background: transparent;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+
+
+  .arrow-button {
+    width: 18px;
+    height: 18px;
+    font-size: var(--unzer-font-size, 12px);
+  }
+
+  .plan-info {
+    font-size: var(--unzer-font-size-xs, 12px);
+    padding: 0 2px;
+    margin: 0 4px;
+  }
+
+  .buttons-container {
+    gap: var(--unzer-spacing, 3px);
+    padding: var(--buttons-container-scroll-padding, 2px 6px 2px 2px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    margin-left: 0;
+    scroll-padding-left: var(--buttons-container-scroll-padding, 6px);
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.7) transparent;
+    position: relative;
+  }
+
+  .buttons-container::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .buttons-container::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.7);
+    border-radius: 2px;
+  }
+
+  .buttons-container::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.7);
+    border-radius: 2px;
+  }
+
+  .buttons-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, 0.8);
+  }
+
+  .plan-button {
+    font-size: var(--unzer-font-size-xs, 12px);
+    flex-shrink: 0;
+  }
+
+  .plan-button:first-child {
+    margin-left: 1px;
+  }
+
+  .plan-button:last-child {
+    margin-right: 3px;
+  }
+
+  /* ⚡ Removed 480px unzer-button overrides - using native buttons */
+
+  .dropdown {
+    font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 12px)) !important;
+    min-width: 80px;
+  }
+}
+
+/* ========== RESPONSIVE STYLES - 320px ========== */
+@media (max-width: 320px) {
+  /* ⚡ Removed 320px unzer-button overrides - using native buttons */
+}

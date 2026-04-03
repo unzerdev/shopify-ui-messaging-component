@@ -1,0 +1,433 @@
+/* Import base styles */
+@import './base.css';
+
+/* Range input specific styles */
+
+/* Remove all inherited styling */
+.input-wrapper:has(.input--range) {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  font-weight: 400 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  overflow: visible !important;
+  /* Add padding to make room for tooltip */
+  padding-top: 50px !important;
+  margin-top: -40px !important;
+}
+
+.input-field-wrapper:has(.input--range) {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  font-weight: 400 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  overflow: visible !important;
+}
+
+.input-wrapper:has(.input--range) * {
+  font-weight: 400 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+}
+
+/* Range styling */
+.input-container--range {
+  border: none !important;
+  background: transparent !important;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--unzer-spacing-md);
+  padding: 0;
+  outline: none !important;
+  box-shadow: none !important;
+  /* Store progress for use in child elements */
+  --progress: var(--range-progress, 0%);
+  /* Ensure tooltip can overflow */
+  overflow: visible !important;
+}
+
+/* Minimalistic range wrapper */
+.range-wrapper {
+  position: relative;
+  flex: 1;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  /* Inherit progress from container */
+  --progress: var(--range-progress, 0%);
+  /* Ensure tooltip can overflow */
+  overflow: visible !important;
+}
+
+.input--range {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none !important;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none !important;
+  box-shadow: none !important;
+  /* Remove all possible browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.input--range:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.input--range:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.input--range:focus::-webkit-slider-thumb {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #e5e7eb !important;
+}
+
+.input--range:focus::-moz-range-thumb {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #e5e7eb !important;
+}
+
+.input--range:active::-webkit-slider-thumb {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #e5e7eb !important;
+}
+
+.input--range:active::-moz-range-thumb {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #e5e7eb !important;
+}
+
+/* Track background (gray line) */
+.range-track-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Progress fill (blue line) */
+.range-track-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: width 0.1s ease;
+  /* Align with center of thumb */
+  transform-origin: left center;
+}
+
+/* Value tooltip */
+.value-tooltip {
+  position: absolute;
+  top: -40px;
+  transform: translateX(-50%);
+  background: #1f2937 !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  z-index: 9999999 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  /* Animation */
+  animation: tooltipFadeIn 0.2s ease !important;
+  pointer-events: none !important;
+  /* Force visibility */
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  /* Force positioning */
+  position: absolute !important;
+}
+
+/* Arrow pointing down */
+.value-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #1f2937;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* WebKit (Chrome, Safari) - Minimalistic */
+.input--range::-webkit-slider-track {
+  height: 4px;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+}
+
+.input--range::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #e5e7eb !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin-top: -4px; /* Center thumb on 4px track: (12-4)/2 = 4px */
+  transition: transform 0.15s ease;
+  position: relative;
+}
+
+/* Remove all focus and drag states */
+.input--range::-webkit-slider-thumb:focus {
+  outline: none !important;
+  border: 2px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.input--range::-webkit-slider-thumb:active {
+  outline: none !important;
+  border: 2px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.input--range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.input--range::-webkit-slider-thumb:active {
+  transform: scale(1.3);
+}
+
+/* Firefox - Minimalistic */
+.input--range::-moz-range-track {
+  height: 4px;
+  background: transparent;
+  border: none;
+}
+
+.input--range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #e5e7eb !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: transform 0.15s ease;
+  margin-top: 0; /* Firefox centers differently */
+}
+
+/* Remove all focus and drag states for Firefox */
+.input--range::-moz-range-thumb:focus {
+  outline: none !important;
+  border: 2px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.input--range::-moz-range-thumb:active {
+  outline: none !important;
+  border: 2px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.input--range::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.input--range::-moz-range-thumb:active {
+  transform: scale(1.3);
+}
+
+/* Hide default Firefox progress */
+.input--range::-moz-range-progress {
+  background: transparent;
+}
+
+/* Range value display */
+.range-value {
+  min-width: 3rem;
+  text-align: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  font-weight: 400 !important;
+  color: #374151 !important;
+  background: #ffffff !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid #e5e7eb !important;
+  font-size: 14px !important;
+}
+
+/* Force font weight override for all range inputs globally */
+unzer-range-input,
+unzer-range-input *,
+unzer-range-input *::before,
+unzer-range-input *::after {
+  font-weight: 400 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+}
+
+/* Additional specific overrides for configurator context */
+.configurator unzer-range-input,
+.configurator unzer-range-input *,
+.configurator unzer-range-input *::before,
+.configurator unzer-range-input *::after {
+  font-weight: 400 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+}
+
+/* Ensure all parent containers allow tooltip overflow */
+unzer-form-group:has(unzer-range-input),
+unzer-form-section:has(unzer-range-input),
+.formRow4:has(unzer-range-input),
+.formRowGeneral:has(unzer-range-input),
+*:has(unzer-range-input) {
+  overflow: visible !important;
+}
+
+/* Range with labels */
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--unzer-spacing-xs);
+  font-size: var(--unzer-font-size-xs);
+  color: var(--unzer-text-secondary);
+}
+
+.range-label {
+  text-align: center;
+  min-width: 2rem;
+}
+
+/* Range ticks */
+.range-ticks {
+  position: relative;
+  height: 0.25rem;
+  margin-top: var(--unzer-spacing-xs);
+  background: repeating-linear-gradient(
+    to right,
+    var(--unzer-border-color) 0,
+    var(--unzer-border-color) 1px,
+    transparent 1px,
+    transparent 10%
+  );
+}
+
+/* Disabled state */
+.input--range:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.range-wrapper:has(.input--range:disabled) .range-track-bg {
+  background: #f3f4f6;
+}
+
+.range-wrapper:has(.input--range:disabled) .range-track-fill {
+  background: #d1d5db;
+}
+
+.input--range:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+  background: #f9fafb;
+  border-color: #d1d5db !important;
+  transform: none;
+}
+
+.input--range:disabled::-moz-range-thumb {
+  cursor: not-allowed;
+  background: #f9fafb;
+  border-color: #d1d5db !important;
+  transform: none;
+}
+
+.input--range:disabled::-webkit-slider-thumb:hover,
+.input--range:disabled::-webkit-slider-thumb:active {
+  transform: none;
+}
+
+.input--range:disabled::-moz-range-thumb:hover,
+.input--range:disabled::-moz-range-thumb:active {
+  transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input--range::-webkit-slider-thumb,
+  .input--range::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .range-value {
+    min-width: 2.5rem;
+    font-size: var(--unzer-font-size-sm);
+    padding: var(--unzer-spacing-xs);
+  }
+
+  .input-container--range {
+    gap: var(--unzer-spacing-sm);
+  }
+}

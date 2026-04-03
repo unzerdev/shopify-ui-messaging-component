@@ -1,0 +1,98 @@
+/* ⚡ Make CSS variables inheritable through Shadow DOM */
+@property --unzer-border-radius {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-font-size {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 14px;
+}
+
+@property --unzer-font-weight {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 400;
+}
+
+@property --unzer-text-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #374151;
+}
+
+@property --unzer-background-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ffffff;
+}
+
+@property --unzer-border-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #e5e7eb;
+}
+
+@property --unzer-spacing {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 16px;
+}
+
+@property --unzer-font-family {
+  syntax: '*';
+  inherits: true;
+  initial-value: inherit;
+}
+
+.info-button {
+  border: 1px solid var(--unzer-installments-info-icon-color, #9E9E9E);
+  border-radius: 50%;
+  background: var(--unzer-installments-background-color, var(--unzer-background-color, white));
+  color: var(--unzer-installments-info-icon-color, var(--unzer-installments-text-color, var(--unzer-text-color, #9E9E9E)));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  /* Inherits font-size, font-weight, and font-family from parent */
+}
+
+.info-button:hover {
+  background: var(--unzer-installments-background-color, var(--unzer-background-color-hover, #f9fafb));
+  border-color: var(--unzer-installments-primary-color, var(--unzer-border-color-hover, #9ca3af));
+  color: var(--unzer-installments-text-color, var(--unzer-text-color-hover, #374151));
+}
+
+.info-button:focus {
+  outline: none;
+  border-color: var(--unzer-installments-primary-color, var(--unzer-primary-color, #2563eb));
+}
+
+.info-link {
+  color: var(--unzer-installments-info-link-color, var(--unzer-installments-text-color, var(--unzer-text-color, #F21C58)));
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: var(--unzer-installments-font-size, var(--unzer-font-size, 14px));
+  font-weight: var(--unzer-installments-font-weight, var(--unzer-font-weight, 400));
+  font-family: var(--unzer-installments-font-family, var(--unzer-font-family, inherit));
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.info-link:hover {
+  color: var(--unzer-installments-text-color, var(--unzer-text-color-hover, #374151));
+  text-decoration: none;
+}
+
+.info-link:focus {
+  outline: none;
+  text-decoration: none;
+  color: var(--unzer-installments-text-color, var(--unzer-text-color, #1f2937));
+}

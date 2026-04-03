@@ -1,0 +1,120 @@
+/* 🎨 Installment Widget CSS Variables */
+
+/* ⚡ CENTRALIZED @property definitions for Shadow DOM inheritance */
+@property --unzer-installments-background-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #FFFFFF;
+}
+
+@property --unzer-installments-text-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #2D2D2D;
+}
+
+@property --unzer-installments-border-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #E0E0E0;
+}
+
+@property --unzer-installments-border-radius {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-installments-border-width {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-installments-font-size {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 14px;
+}
+
+
+@property --unzer-installments-font-weight {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 400;
+}
+
+@property --unzer-installments-font-family {
+  syntax: '*';
+  inherits: true;
+  initial-value: inherit;
+}
+
+@property --unzer-installments-spacing {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 16px;
+}
+
+
+@property --unzer-installments-widget-width {
+  syntax: '<length-percentage>';
+  inherits: true;
+  initial-value: 100%;
+}
+
+@property --unzer-installments-info-icon-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #9E9E9E;
+}
+
+@property --unzer-installments-info-link-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #F21C58;
+}
+
+
+:root {
+  /* === CORE INSTALLMENT VARIABLES === */
+  --unzer-installments-background-color: #FFFFFF;
+  --unzer-installments-text-color: #374151;
+  --unzer-installments-border-color: #E0E0E0;
+
+  /* Layout & Typography */
+  --unzer-installments-border-radius: 3px;
+  --unzer-installments-border-width: 1px;
+  --unzer-installments-font-size: 11px;
+  --unzer-installments-font-weight: 400;
+  --unzer-installments-font-family: system-ui, -apple-system, sans-serif;
+  --unzer-installments-spacing: 8px;
+  --unzer-installments-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --unzer-installments-widget-width: 100%;
+  --unzer-installments-widget-height: auto;
+
+  /* Navigation colors */
+  --unzer-installments-default-button-color: #9C9C9C;
+  --unzer-installments-selected-button-color: #F21C58;
+  --unzer-installments-arrows-color: #F21C58;
+
+  /* Info button */
+  --unzer-installments-info-icon-color: #9E9E9E;
+  --unzer-installments-info-link-color: #F21C58;
+
+  /* Extended spacing sizes */
+  --unzer-installments-spacing-xs: 4px;
+  --unzer-installments-spacing-sm: 8px;
+  --unzer-installments-spacing-md: 16px;
+  --unzer-installments-spacing-lg: 24px;
+  --unzer-installments-spacing-xl: 32px;
+
+  /* Extended border radius sizes */
+  --unzer-installments-border-radius-sm: 4px;
+  --unzer-installments-border-radius-md: 8px;
+  --unzer-installments-border-radius-lg: 12px;
+
+  /* Extended shadow sizes */
+  --unzer-installments-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --unzer-installments-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --unzer-installments-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+}

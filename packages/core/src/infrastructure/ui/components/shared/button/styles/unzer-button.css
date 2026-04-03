@@ -1,0 +1,420 @@
+:host {
+  display: inline-flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  vertical-align: middle;
+}
+
+:host([full-width]) {
+  display: flex;
+  width: 100%;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+/* Button Base */
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  background: none;
+  font-family: inherit;
+  min-height: 40px;
+  text-align: center;
+}
+
+.button:focus-visible {
+  outline: 2px solid #635bff;
+  outline-offset: 2px;
+}
+
+/* Full width variant */
+:host([full-width]) .button {
+  width: 100%;
+}
+
+/* Primary Variant */
+.button.primary {
+  background: #635bff;
+  color: #ffffff;
+  border-color: #635bff;
+}
+
+.button.primary:hover:not(:disabled) {
+  background: #5a51db;
+  border-color: #5a51db;
+}
+
+.button.primary:active {
+  background: #4f46b8;
+  border-color: #4f46b8;
+}
+
+.button.primary:disabled {
+  background: #9ca3af;
+  border-color: #9ca3af;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Secondary Variant */
+.button.secondary {
+  background: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.button.secondary:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+.button.secondary:active {
+  background: #f3f4f6;
+  border-color: #6b7280;
+}
+
+.button.secondary:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Outline Variant */
+.button.outline {
+  background: transparent;
+  color: #635bff;
+  border-color: #635bff;
+}
+
+.button.outline:hover:not(:disabled) {
+  background: #f0f4f8;
+  color: #5a51db;
+  border-color: #5a51db;
+}
+
+.button.outline:active {
+  background: #e2e8f0;
+  color: #4f46b8;
+  border-color: #4f46b8;
+}
+
+.button.outline:disabled {
+  background: transparent;
+  color: #9ca3af;
+  border-color: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Ghost Variant */
+.button.ghost {
+  background: transparent;
+  color: #374151;
+  border-color: transparent;
+}
+
+.button.ghost:hover:not(:disabled) {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.button.ghost:active {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.button.ghost:disabled {
+  background: transparent;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Danger Variant */
+.button.danger {
+  background: #f56565;
+  color: #ffffff;
+  border-color: #f56565;
+}
+
+.button.danger:hover:not(:disabled) {
+  background: #e53e3e;
+  border-color: #e53e3e;
+}
+
+.button.danger:active {
+  background: #c53030;
+  border-color: #c53030;
+}
+
+.button.danger:disabled {
+  background: #fca5a5;
+  border-color: #fca5a5;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Success Variant */
+.button.success {
+  background: #48bb78;
+  color: #ffffff;
+  border-color: #48bb78;
+}
+
+.button.success:hover:not(:disabled) {
+  background: #38a169;
+  border-color: #38a169;
+}
+
+.button.success:active {
+  background: #2f855a;
+  border-color: #2f855a;
+}
+
+.button.success:disabled {
+  background: #9ae6b4;
+  border-color: #9ae6b4;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Warning Variant */
+.button.warning {
+  background: #ed8936;
+  color: #ffffff;
+  border-color: #ed8936;
+}
+
+.button.warning:hover:not(:disabled) {
+  background: #dd6b20;
+  border-color: #dd6b20;
+}
+
+.button.warning:active {
+  background: #c05621;
+  border-color: #c05621;
+}
+
+.button.warning:disabled {
+  background: #fbb574;
+  border-color: #fbb574;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Size Variants */
+.button.small {
+  padding: 4px 12px;
+  font-size: 12px;
+  min-height: 32px;
+  gap: 6px;
+}
+
+.button.large {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-height: 48px;
+  gap: 10px;
+}
+
+.button.xl {
+  padding: 16px 32px;
+  font-size: 18px;
+  min-height: 56px;
+  gap: 12px;
+}
+
+/* Icon Containers */
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-left {
+  order: -1;
+}
+
+.icon-right {
+  order: 1;
+}
+
+.button-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.button.small .button-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.button.large .button-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.button.xl .button-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon-only buttons */
+:host([icon-only]) .button {
+  padding: 8px;
+  aspect-ratio: 1;
+  min-width: 40px;
+}
+
+:host([icon-only]) .button.small {
+  padding: 4px;
+  min-width: 32px;
+}
+
+:host([icon-only]) .button.large {
+  padding: 12px;
+  min-width: 48px;
+}
+
+:host([icon-only]) .button.xl {
+  padding: 16px;
+  min-width: 56px;
+}
+
+/* Loading State */
+.button.loading {
+  pointer-events: none;
+}
+
+.button.loading .button-content {
+  opacity: 0.6;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.button.small .loading-spinner {
+  width: 14px;
+  height: 14px;
+}
+
+.button.large .loading-spinner {
+  width: 18px;
+  height: 18px;
+}
+
+.button.xl .loading-spinner {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Button Content */
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+  width: 100%;
+}
+
+/* Badge/Counter */
+.button-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #f56565;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+/* Rounded variant */
+:host([rounded]) .button {
+  border-radius: 24px;
+}
+
+:host([rounded][icon-only]) .button {
+  border-radius: 50%;
+}
+
+/* Shadow variants */
+:host([shadow]) .button {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+:host([shadow]) .button:hover:not(:disabled) {
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+:host([shadow='large']) .button {
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+:host([shadow='large']) .button:hover:not(:disabled) {
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05);
+}

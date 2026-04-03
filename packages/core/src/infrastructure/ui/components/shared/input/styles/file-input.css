@@ -1,0 +1,115 @@
+/* Import base styles */
+@import './base.css';
+
+/* File input specific styles */
+
+/* File input styling */
+.input--file {
+  padding: var(--unzer-spacing-sm);
+  cursor: pointer;
+}
+
+.input--file::file-selector-button {
+  background: var(--unzer-color-primary);
+  color: white;
+  border: none;
+  padding: var(--unzer-spacing-xs) var(--unzer-spacing-sm);
+  border-radius: var(--unzer-border-radius-sm);
+  margin-right: var(--unzer-spacing-sm);
+  cursor: pointer;
+  font-size: var(--unzer-font-size-sm);
+  transition: var(--unzer-transition);
+}
+
+.input--file::file-selector-button:hover {
+  background: var(--unzer-color-primary-dark, var(--unzer-color-primary));
+}
+
+/* Button-style file input */
+.hidden-file-input {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+:host([as-button]) {
+  display: inline-block;
+  width: auto;
+}
+
+/* File input states */
+.input-container--file {
+  border-style: dashed;
+  transition:
+    var(--unzer-transition),
+    border-color 0.2s ease;
+}
+
+.input-container--file:hover {
+  border-color: var(--unzer-color-primary);
+  background-color: var(--unzer-bg-surface-variant);
+}
+
+.input-container--file.input-container--focused {
+  border-style: solid;
+}
+
+/* Drag and drop styling */
+.input-container--file.drag-over {
+  border-color: var(--unzer-color-primary);
+  background-color: rgba(var(--unzer-color-primary-rgb), 0.1);
+  transform: scale(1.02);
+}
+
+/* File validation states */
+.input-container--file.invalid-file {
+  border-color: var(--unzer-color-danger);
+  background-color: rgba(var(--unzer-color-danger-rgb), 0.1);
+}
+
+/* Multi-file display */
+.file-list {
+  margin-top: var(--unzer-spacing-xs);
+  padding: var(--unzer-spacing-sm);
+  background: var(--unzer-bg-surface-variant);
+  border-radius: var(--unzer-border-radius);
+  font-size: var(--unzer-font-size-sm);
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--unzer-spacing-xs) 0;
+  border-bottom: 1px solid var(--unzer-border-color);
+}
+
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-name {
+  flex: 1;
+  color: var(--unzer-text-primary);
+  word-break: break-word;
+}
+
+.file-size {
+  color: var(--unzer-text-secondary);
+  font-size: var(--unzer-font-size-xs);
+  margin-left: var(--unzer-spacing-sm);
+}
+
+.file-remove {
+  color: var(--unzer-color-danger);
+  cursor: pointer;
+  padding: var(--unzer-spacing-xs);
+  margin-left: var(--unzer-spacing-sm);
+  border: none;
+  background: transparent;
+  border-radius: var(--unzer-border-radius-sm);
+}
+
+.file-remove:hover {
+  background: rgba(var(--unzer-color-danger-rgb), 0.1);
+}

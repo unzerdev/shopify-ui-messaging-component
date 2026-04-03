@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@unzer/messaging-core": ["../core/src/index.ts"],
+      "@unzer/messaging-installments": ["../installments/src/index.ts"],
+      "@unzer/messaging-invoice": ["../invoice/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

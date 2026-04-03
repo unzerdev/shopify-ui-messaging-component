@@ -1,0 +1,115 @@
+/* Invoice Widget CSS Variables */
+
+/* @property definitions for Shadow DOM inheritance */
+@property --unzer-invoice-primary-color {
+  syntax: '<color>';
+  inherits: true;
+}
+
+
+@property --unzer-invoice-background-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #FFFFFF;
+}
+
+@property --unzer-invoice-text-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #2D2D2D;
+}
+
+@property --unzer-invoice-border-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #E0E0E0;
+}
+
+@property --unzer-invoice-border-radius {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-invoice-border-width {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-invoice-font-size {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 14px;
+}
+
+@property --unzer-invoice-font-weight {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 400;
+}
+
+@property --unzer-invoice-font-family {
+  syntax: '*';
+  inherits: true;
+  initial-value: inherit;
+}
+
+@property --unzer-invoice-spacing {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 16px;
+}
+
+
+@property --unzer-invoice-widget-width {
+  syntax: '<length-percentage>';
+  inherits: true;
+  initial-value: 100%;
+}
+
+@property --unzer-invoice-info-icon-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #9E9E9E;
+}
+
+@property --unzer-invoice-info-link-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #F21C58;
+}
+
+:root {
+  --unzer-invoice-primary-color: #635bff;
+  --unzer-invoice-secondary-color: #32325d;
+  --unzer-invoice-background-color: #FFFFFF;
+  --unzer-invoice-text-color: #2D2D2D;
+  --unzer-invoice-border-color: #E0E0E0;
+
+  --unzer-invoice-border-radius: 8px;
+  --unzer-invoice-border-width: 1px;
+  --unzer-invoice-font-size: 14px;
+  --unzer-invoice-font-weight: 400;
+  --unzer-invoice-font-family: system-ui, -apple-system, sans-serif;
+  --unzer-invoice-spacing: 16px;
+  --unzer-invoice-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  --unzer-invoice-widget-width: 100%;
+
+  /* Info button */
+  --unzer-invoice-info-icon-color: #9E9E9E;
+  --unzer-invoice-info-link-color: #F21C58;
+
+  --unzer-invoice-spacing-xs: 4px;
+  --unzer-invoice-spacing-sm: 8px;
+  --unzer-invoice-spacing-md: 16px;
+  --unzer-invoice-spacing-lg: 24px;
+  --unzer-invoice-spacing-xl: 32px;
+
+  --unzer-invoice-border-radius-sm: 4px;
+  --unzer-invoice-border-radius-md: 8px;
+  --unzer-invoice-border-radius-lg: 12px;
+
+  --unzer-invoice-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --unzer-invoice-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --unzer-invoice-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

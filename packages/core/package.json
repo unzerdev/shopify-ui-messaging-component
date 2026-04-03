@@ -1,0 +1,23 @@
+{
+  "name": "@unzer/messaging-core",
+  "version": "1.0.0",
+  "description": "Unzer Messaging Core - Infrastructure, DI, i18n, shared UI components, schema system",
+  "type": "module",
+  "main": "dist/unzer-core.es.js",
+  "module": "dist/unzer-core.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/unzer-core.es.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "lit": "^3.2.1",
+    "dompurify": "^3.3.2"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@unzer/messaging-widgets",
+  "version": "1.0.0",
+  "description": "Unzer Messaging Widgets — combined bundle (core + installments + invoice)",
+  "type": "module",
+  "main": "dist/unzer-widgets.es.js",
+  "module": "dist/unzer-widgets.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/unzer-widgets.es.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@unzer/messaging-core": "*",
+    "@unzer/messaging-installments": "*",
+    "@unzer/messaging-invoice": "*"
+  }
+}

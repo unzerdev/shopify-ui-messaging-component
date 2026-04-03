@@ -1,0 +1,66 @@
+/* ⚡ @property definitions now centralized in installment-variables.css */
+
+:host {
+  display: block;
+  margin-bottom: var(--unzer-installments-spacing-md);
+  font-family: var(--unzer-installments-font-family);
+}
+
+.plan-card {
+  border: calc(var(--unzer-installments-border-width, var(--unzer-border-width, 1px)) * 2) solid var(--unzer-installments-border-color, var(--plan-card-border, var(--unzer-color-border-light)));
+  border-radius: var(--plan-card-radius, var(--unzer-installments-border-radius-md));
+  overflow: hidden;
+  background: var(--plan-card-bg, var(--unzer-color-surface-primary));
+  box-shadow: var(--plan-card-shadow, var(--unzer-installments-shadow-sm));
+  transition: all 0.2s ease;
+  margin: var(--plan-card-margin, 0 0 var(--unzer-installments-spacing-md) 0);
+}
+
+.plan-card:hover {
+  border-color: var(--unzer-installments-primary-color);
+  box-shadow: var(--unzer-shadow-md);
+}
+
+.plan-card.selected {
+  border-color: var(--unzer-installments-primary-color);
+  background: var(--unzer-color-primary-50);
+}
+
+.plan-header {
+  padding: var(--unzer-spacing-sm);
+  background: transparent;
+  border-bottom: 1px solid var(--unzer-color-border-light);
+}
+
+.plan-rates {
+  padding: var(--plan-rates-padding, var(--unzer-installments-spacing));
+  background: var(--plan-rates-bg, transparent);
+}
+
+.rates-title {
+  font-size: var(--plan-rates-title-size, var(--unzer-font-size-sm));
+  font-weight: var(--plan-rates-title-weight, var(--unzer-font-weight-semibold));
+  color: var(--plan-rates-title-color, var(--unzer-color-text-primary));
+  margin-bottom: var(--unzer-spacing-sm);
+}
+
+.plan-actions {
+  padding: var(--plan-actions-padding, var(--unzer-installments-spacing));
+  border-top: 1px solid var(--plan-actions-border, var(--unzer-color-border-light));
+  background: var(--plan-actions-bg, var(--unzer-color-surface-secondary));
+}
+
+.secci-link {
+  display: block;
+  font-size: var(--secci-link-size, var(--unzer-font-size-sm));
+  font-weight: var(--secci-link-weight, var(--unzer-font-weight-normal));
+  color: var(--secci-link-color, var(--unzer-color-primary));
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.secci-link:hover {
+  color: var(--secci-link-hover-color, var(--unzer-color-primary-700));
+  text-decoration: underline;
+}

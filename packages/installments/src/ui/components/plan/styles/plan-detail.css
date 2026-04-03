@@ -1,0 +1,251 @@
+/* ⚡ Make CSS variables inheritable through Shadow DOM */
+@property --unzer-border-radius {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-font-size {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 14px;
+}
+
+@property --unzer-font-weight {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 400;
+}
+
+@property --unzer-text-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #374151;
+}
+
+@property --unzer-background-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ffffff;
+}
+
+@property --unzer-border-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #e5e7eb;
+}
+
+@property --unzer-spacing {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 16px;
+}
+
+@property --unzer-font-family {
+  syntax: '*';
+  inherits: true;
+  
+  initial-value: inherit;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  font-family: var(--unzer-font-family);
+}
+
+.plan-detail {
+  background: var(--plan-detail-bg, #ffffff);
+  border: var(--unzer-installments-border-width, var(--unzer-border-width)) solid var(--unzer-installments-border-color, var(--unzer-border-color));
+  border-radius: var(--plan-detail-radius, 8px);
+  padding: var(--plan-detail-padding, 16px);
+  box-shadow: var(--plan-detail-shadow, none);
+  font-family: var(--unzer-font-family);
+  transition: all 0.3s ease;
+}
+
+.plan-detail.clickable {
+  cursor: pointer;
+}
+
+.plan-detail.clickable:hover {
+  border-color: var(--unzer-installments-primary-color, var(--unzer-color-primary, #2563eb));
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Payment Information */
+.payment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.monthly-payment {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.amount {
+  font-size: var(--plan-detail-amount-size, 20px);
+  font-weight: var(--plan-detail-amount-weight, 600);
+  color: var(--plan-detail-amount-color, #2563eb);
+  line-height: 1;
+}
+
+.frequency {
+  font-size: var(--plan-detail-font-size, 14px);
+  font-weight: var(--plan-detail-font-weight, 400);
+  color: var(--plan-detail-text-secondary, #6b7280);
+}
+
+.installment-count {
+  font-size: var(--plan-detail-font-size, 14px);
+  font-weight: var(--plan-detail-font-weight, 500);
+  color: var(--plan-detail-text-primary, #374151);
+}
+
+/* Detail Information */
+.detail-info {
+  border-top: var(--unzer-border-width) solid var(--unzer-border-color);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-row .label {
+  font-size: calc(var(--plan-detail-font-size, 14px) - 1px);
+  font-weight: 400;
+  color: var(--plan-detail-text-secondary, #6b7280);
+}
+
+.detail-row .value {
+  font-size: var(--plan-detail-font-size, 14px);
+  font-weight: var(--plan-detail-font-weight, 500);
+  color: var(--plan-detail-text-primary, #374151);
+}
+
+/* Compact Information */
+.compact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(var(--plan-detail-font-size, 14px) - 1px);
+  color: var(--plan-detail-text-secondary, #6b7280);
+  margin-top: 4px;
+}
+
+.total-amount {
+  font-weight: var(--plan-detail-font-weight, 500);
+}
+
+.interest-rate {
+  font-weight: 400;
+}
+
+/* Layout Variations */
+
+/* Horizontal Layout (default) */
+.plan-detail.horizontal .detail-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.plan-detail.horizontal .detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.plan-detail.horizontal .detail-row .label {
+  order: 1;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plan-detail.horizontal .detail-row .value {
+  order: 2;
+  font-size: var(--plan-detail-font-size, 14px);
+  font-weight: 600;
+}
+
+/* Vertical Layout */
+.plan-detail.vertical .detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-detail.vertical .detail-row {
+  justify-content: space-between;
+}
+
+/* Compact Layout */
+.plan-detail.compact {
+  padding: 12px 16px;
+}
+
+.plan-detail.compact .payment-info {
+  margin-bottom: 4px;
+}
+
+.plan-detail.compact .amount {
+  font-size: calc(var(--plan-detail-amount-size, 18px) - 2px);
+}
+
+.plan-detail.compact .installment-count {
+  font-size: calc(var(--plan-detail-font-size, 14px) - 1px);
+}
+
+/* No plan state */
+.no-plan {
+  padding: 20px;
+  text-align: center;
+  color: var(--plan-detail-text-secondary, #6b7280);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .plan-detail.horizontal .detail-info {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .plan-detail.horizontal .detail-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .plan-detail.horizontal .detail-row .label {
+    order: 0;
+    font-size: calc(var(--plan-detail-font-size, 14px) - 1px);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .plan-detail.horizontal .detail-row .value {
+    order: 1;
+    font-size: var(--plan-detail-font-size, 14px);
+  }
+
+  .payment-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .amount {
+    font-size: calc(var(--plan-detail-amount-size, 18px) - 2px);
+  }
+}

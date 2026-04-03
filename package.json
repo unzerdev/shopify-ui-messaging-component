@@ -1,0 +1,70 @@
+{
+  "name": "@unzer/messaging-components",
+  "version": "1.0.0",
+  "description": "Unzer Messaging UI Components",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/installments",
+    "packages/invoice",
+    "packages/widgets"
+  ],
+  "files": [
+    "packages"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:core": "cd packages/core && npx vite build",
+    "build:installments": "cd packages/installments && npx vite build",
+    "build:invoice": "cd packages/invoice && npx vite build",
+    "build:widgets": "cd packages/widgets && npx vite build",
+    "build:all": "npm run build:core && npm run build:installments && npm run build:invoice && npm run build:widgets",
+    "build": "npm run build:all",
+    "build:dev": "npm run build:all",
+    "build:prod": "cross-env BUILD_MODE=production npm run build:all",
+    "clean": "rimraf dist",
+    "preview": "vite preview",
+    "test": "web-test-runner --coverage",
+    "test:watch": "web-test-runner --watch",
+    "lint": "eslint packages --ext .ts,.js",
+    "lint:fix": "eslint packages --ext .ts,.js --fix",
+    "format": "prettier --write packages/*/src/**/*.{ts,js,css}",
+    "format:check": "prettier --check packages/*/src/**/*.{ts,js,css}"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "unzer",
+    "ui-components",
+    "messaging-components"
+  ],
+  "author": "Unzer",
+  "license": "MIT",
+  "dependencies": {
+    "dompurify": "^3.3.2",
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.12.0",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "@web/test-runner": "^0.18.0",
+    "@web/test-runner-playwright": "^0.11.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^8.54.0",
+    "markdown-it-plantuml-ex": "^1.0.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "vitepress": "^1.0.0",
+    "vitepress-plugin-diagrams": "^1.1.2",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

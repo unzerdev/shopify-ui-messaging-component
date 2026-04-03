@@ -1,0 +1,28 @@
+/* ⚡ @property definitions now centralized in installment-variables.css */
+
+:host {
+  display: block;
+  margin-bottom: var(--unzer-spacing-xs);
+  font-family: var(--unzer-installments-font-family);
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--unzer-spacing-xs) var(--unzer-spacing-sm);
+  background: var(--unzer-color-surface-secondary);
+  border-radius: var(--unzer-border-radius-sm);
+  border: var(--unzer-installments-border-width, var(--unzer-border-width, 1px)) solid var(--unzer-installments-border-color, var(--unzer-color-border-light));
+  font-size: var(--unzer-installments-font-size-sm);
+}
+
+.rate-date {
+  color: var(--unzer-color-text-secondary);
+  font-weight: var(--unzer-font-weight-medium);
+}
+
+.rate-amount {
+  color: var(--unzer-color-text-primary);
+  font-weight: var(--unzer-font-weight-semibold);
+}

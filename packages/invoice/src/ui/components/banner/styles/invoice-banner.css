@@ -1,0 +1,107 @@
+:host {
+  display: block;
+  position: relative;
+  width: var(--fallback-widget-width);
+  max-width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+  container-type: inline-size;
+
+  /* CSS Custom Property Fallback Chains */
+  --fallback-text-color: var(--unzer-invoice-text-color, var(--unzer-text-color, var(--unzer-color-text-primary, #2D2D2D)));
+  --fallback-bg-color: var(--unzer-invoice-background-color, var(--unzer-background-color, #FFFFFF));
+  --fallback-border-color: var(--unzer-invoice-border-color, var(--unzer-border-color, #E0E0E0));
+  --fallback-border-radius: var(--unzer-invoice-border-radius, var(--unzer-border-radius, 8px));
+  --fallback-border-width: var(--unzer-invoice-border-width, var(--unzer-border-width, 1px));
+  --fallback-font-size: var(--unzer-invoice-font-size, var(--unzer-font-size, 14px));
+  --fallback-font-weight: var(--unzer-invoice-font-weight, var(--unzer-font-weight, 450));
+  --fallback-font-family: var(--unzer-invoice-font-family, var(--unzer-font-family, system-ui));
+  --fallback-spacing: var(--unzer-invoice-spacing, var(--unzer-spacing-md, 10px));
+  --fallback-shadow: var(--unzer-invoice-shadow, var(--unzer-shadow, none));
+  --fallback-widget-width: var(--unzer-invoice-widget-width, 100%);
+  --fallback-primary-color: var(--unzer-invoice-primary-color, var(--unzer-primary-color, #e91e63));
+
+  font-family: var(--fallback-font-family);
+  color: var(--fallback-text-color);
+  font-size: var(--fallback-font-size);
+  font-weight: var(--fallback-font-weight);
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  gap: var(--fallback-spacing);
+  background: var(--fallback-bg-color);
+  border-radius: var(--fallback-border-radius);
+  border: var(--fallback-border-width) solid var(--fallback-border-color);
+  box-shadow: var(--fallback-shadow);
+  padding: 0 var(--fallback-spacing);
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.4;
+  transition: border-color 0.2s ease;
+  cursor: default;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fallback-border-color) transparent;
+  white-space: nowrap;
+}
+
+.banner-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.banner-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.banner-container::-webkit-scrollbar-thumb {
+  background: var(--fallback-border-color);
+  border-radius: var(--fallback-border-radius);
+}
+
+.banner-container::-webkit-scrollbar-thumb:hover {
+  background: var(--fallback-text-color);
+}
+
+.banner-label {
+  font-size: var(--fallback-font-size);
+  font-weight: var(--fallback-font-weight);
+  color: var(--fallback-text-color);
+  line-height: 1;
+  white-space: nowrap;
+  font-family: var(--fallback-font-family);
+  flex-shrink: 0;
+}
+
+unzer-invoice-info-button {
+  flex-shrink: 0;
+}
+
+/* Logo — sits next to info button */
+unzer-invoice-logo {
+  flex-shrink: 0;
+  display: flex;
+}
+
+/* Logo left — reorder before label */
+unzer-invoice-logo.logo-left {
+  order: -1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+  .banner-container {
+    height: 36px;
+  }
+
+  .banner-label {
+    font-size: calc(var(--fallback-font-size) - 1px);
+    white-space: normal;
+  }
+}

@@ -1,0 +1,273 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.textarea-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.textarea-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  border: var(--unzer-border-width) solid var(--unzer-border-color);
+  border-radius: var(--unzer-border-radius);
+  background-color: var(--unzer-bg-surface);
+  transition: var(--unzer-transition);
+  overflow: hidden;
+}
+
+.textarea-field-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.textarea-field {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: var(--unzer-spacing-sm) var(--unzer-spacing-md);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.4;
+  color: var(--unzer-text-primary);
+  resize: vertical;
+  min-height: 3rem;
+  box-sizing: border-box;
+}
+
+.textarea-field::placeholder {
+  color: var(--unzer-text-secondary);
+}
+
+/* Auto-resize behavior */
+.textarea-field.textarea--auto-resize {
+  resize: none;
+  overflow: hidden;
+  min-height: auto;
+}
+
+/* Container states */
+.textarea-container--focused {
+  border-color: var(--unzer-color-primary);
+  box-shadow: var(--unzer-focus-ring);
+}
+
+.textarea-container--disabled {
+  background-color: var(--unzer-bg-surface-variant);
+  cursor: not-allowed;
+}
+
+.textarea-container--readonly {
+  background-color: var(--unzer-bg-surface-variant);
+}
+
+.textarea-container--error {
+  border-color: var(--unzer-color-danger);
+}
+
+.textarea-container--error.textarea-container--focused {
+  border-color: var(--unzer-color-danger);
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+.textarea-container--success {
+  border-color: var(--unzer-color-success);
+}
+
+.textarea-container--warning {
+  border-color: var(--unzer-color-warning);
+}
+
+.textarea-container--loading {
+  pointer-events: none;
+}
+
+/* Field states */
+.textarea-field:disabled {
+  color: var(--unzer-text-disabled);
+  cursor: not-allowed;
+}
+
+.textarea-field:readonly {
+  cursor: default;
+}
+
+/* Size variants */
+:host([size='small']) .textarea-field {
+  padding: var(--unzer-spacing-xs) var(--unzer-spacing-sm);
+  font-size: var(--unzer-font-size-sm);
+  min-height: 2.5rem;
+}
+
+:host([size='large']) .textarea-field {
+  padding: var(--unzer-spacing-md) var(--unzer-spacing-lg);
+  font-size: var(--unzer-font-size-lg);
+  min-height: 4rem;
+}
+
+/* Label */
+.label {
+  display: block;
+  margin-bottom: var(--unzer-spacing-xs);
+  font-size: var(--unzer-font-size-sm);
+  font-weight: 500;
+  color: var(--unzer-text-primary);
+}
+
+.label--required::after {
+  content: '*';
+  color: var(--unzer-color-danger);
+  margin-left: 0.25rem;
+}
+
+/* Help container */
+.help-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: var(--unzer-spacing-xs);
+  gap: var(--unzer-spacing-sm);
+}
+
+.help-text {
+  flex: 1;
+  font-size: var(--unzer-font-size-xs);
+  color: var(--unzer-text-secondary);
+  line-height: 1.4;
+}
+
+.help-text--error {
+  color: var(--unzer-color-danger);
+}
+
+.help-text--success {
+  color: var(--unzer-color-success);
+}
+
+.help-text--warning {
+  color: var(--unzer-color-warning);
+}
+
+/* Character count */
+.character-count {
+  flex-shrink: 0;
+  font-size: var(--unzer-font-size-xs);
+  color: var(--unzer-text-secondary);
+  font-family: monospace;
+}
+
+.character-count.over-limit {
+  color: var(--unzer-color-danger);
+  font-weight: 600;
+}
+
+/* Clear button */
+.clear-button {
+  position: absolute;
+  top: var(--unzer-spacing-xs);
+  right: var(--unzer-spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--unzer-text-secondary);
+  cursor: pointer;
+  border-radius: var(--unzer-border-radius-sm);
+  transition: var(--unzer-transition);
+  padding: 0;
+}
+
+.clear-button:hover {
+  background-color: var(--unzer-color-danger-light, rgba(220, 53, 69, 0.1));
+  color: var(--unzer-color-danger);
+}
+
+.clear-button:focus {
+  outline: 2px solid var(--unzer-color-primary);
+  outline-offset: 1px;
+}
+
+.clear-button:active {
+  transform: scale(0.95);
+}
+
+.clear-button svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+/* Disabled state for clear button */
+:host([disabled]) .clear-button {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Loading state */
+.textarea-container--loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--unzer-color-primary), transparent);
+  animation: loading-progress 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Resize variants */
+:host([resize='none']) .textarea-field {
+  resize: none;
+}
+
+:host([resize='both']) .textarea-field {
+  resize: both;
+}
+
+:host([resize='horizontal']) .textarea-field {
+  resize: horizontal;
+}
+
+:host([resize='vertical']) .textarea-field {
+  resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :host([size='large']) .textarea-field {
+    padding: var(--unzer-spacing-sm) var(--unzer-spacing-md);
+    font-size: inherit;
+  }
+
+  .clear-button {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .clear-button svg {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}

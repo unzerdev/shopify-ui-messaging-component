@@ -1,0 +1,150 @@
+/**
+ * Responsive Utility Classes and Breakpoints
+ * Centralized responsive design system to avoid duplication
+ */
+
+:root {
+  /* Breakpoint variables */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 360px;
+  --breakpoint-md: 480px;
+  --breakpoint-lg: 640px;
+  --breakpoint-xl: 768px;
+}
+
+/* Shared responsive mixins via CSS custom properties */
+
+/* Container responsive behavior */
+.responsive-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Small devices (≤320px) */
+@media (max-width: 320px) {
+  .responsive-container {
+    padding: 4px 8px;
+    gap: var(--unzer-spacing-xs, 4px);
+    border-radius: var(--unzer-border-radius-sm, 4px);
+    min-height: auto;
+  }
+
+  .responsive-navigation {
+    padding: 0;
+    gap: var(--unzer-spacing-xs, 3px);
+    min-height: 30px;
+    border-radius: var(--unzer-border-radius-sm, 3px);
+  }
+
+  .responsive-buttons {
+    gap: var(--unzer-spacing-xs, 3px);
+    padding: 1px;
+    min-height: 30px;
+    border-radius: var(--unzer-border-radius-sm, 3px);
+  }
+}
+
+/* Small devices (≤360px) */
+@media (max-width: 360px) {
+  .responsive-container {
+    padding: var(--unzer-spacing-xs, 6px 10px);
+    gap: var(--unzer-spacing-xs, 6px);
+    border-radius: var(--unzer-border-radius-md, 6px);
+  }
+
+  .responsive-navigation {
+    padding: 1px 0;
+    border-radius: var(--unzer-border-radius-sm, 4px);
+  }
+
+  .responsive-buttons {
+    gap: var(--unzer-spacing-xs, 4px);
+    padding: 2px;
+    min-height: 34px;
+    border-radius: var(--unzer-border-radius-sm, 4px);
+  }
+}
+
+/* Medium devices (≤480px) */
+@media (max-width: 480px) {
+  .responsive-container {
+    padding: var(--unzer-spacing-sm, 8px 12px);
+    gap: var(--unzer-spacing-sm, 10px);
+    background: var(--plans-container-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
+    border-radius: var(--unzer-border-radius-md, 8px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+  .responsive-navigation {
+    min-height: auto;
+    padding: 2px 0;
+    margin: 0;
+    border-radius: var(--unzer-border-radius-md, 6px);
+  }
+
+  .responsive-buttons {
+    gap: var(--unzer-spacing-sm, 6px);
+    padding: var(--unzer-spacing-xs, 4px);
+    justify-content: flex-start;
+    min-height: 38px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    border-radius: var(--unzer-border-radius-md, 6px);
+    background: var(--plan-buttons-bg, rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(8px);
+  }
+
+  .responsive-select {
+    gap: var(--unzer-spacing-sm, 8px);
+    padding: var(--unzer-spacing-xs, 6px);
+    min-height: 40px;
+  }
+
+  .responsive-dropdown {
+    min-width: 100px;
+    font-size: var(--unzer-font-size-xs, 12px);
+    padding: 6px 24px 6px 8px;
+    max-width: 150px;
+  }
+}
+
+/* Utility classes for common responsive patterns */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+/* Responsive text sizes */
+.responsive-text {
+  font-size: var(--unzer-font-size-md, 16px);
+}
+
+@media (max-width: 480px) {
+  .responsive-text {
+    font-size: var(--unzer-font-size-sm, 14px);
+  }
+}
+
+@media (max-width: 360px) {
+  .responsive-text {
+    font-size: var(--unzer-font-size-xs, 12px);
+  }
+}

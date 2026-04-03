@@ -1,0 +1,223 @@
+/* Import base styles */
+@import './base.css';
+
+/* Color input wrapper - modern professional design */
+.color-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+  max-width: 120px;
+  height: 28px;
+}
+
+.color-input-wrapper:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+.color-input-wrapper:focus-within {
+  border-color: #e5e7eb;
+  box-shadow: none;
+  outline: none;
+}
+
+.color-picker-input {
+  width: 6px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-right: 1px solid #e5e7eb;
+  border-radius: 0;
+  cursor: pointer;
+  background: transparent;
+  overflow: hidden;
+  flex-shrink: 0;
+  outline: none !important;
+}
+
+.color-picker-input:focus,
+.color-picker-input:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+.color-picker-input::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.color-picker-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Firefox color input styling */
+.color-picker-input::-moz-color-swatch {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hex-symbol {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, monospace;
+  margin: 0 4px 0 2px;
+}
+
+.color-text-input {
+  flex: 1;
+  padding: 4px 6px;
+  border: none;
+  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #374151;
+  outline: none !important;
+  letter-spacing: 0.025em;
+  width: 100%;
+}
+
+.color-text-input:focus,
+.color-text-input:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.color-text-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Override all base input container styles for color input */
+:host([type='color']) .input-container,
+:host .input-container--color {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Remove all inherited borders and shadows from base input container */
+.input-container--color.input-container {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.input-container--color.input-container--focused,
+.input-container--color.input-container--error,
+.input-container--color.input-container--success,
+.input-container--color.input-container--warning {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Disabled state styling */
+.color-input-wrapper:has(.color-picker-input:disabled),
+.color-input-wrapper:has(.color-text-input:disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.color-picker-input:disabled,
+.color-text-input:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+/* Error state styling */
+.color-input-wrapper--error {
+  border-color: #ef4444;
+  box-shadow: 0 1px 3px 0 rgba(239, 68, 68, 0.05);
+}
+
+.color-input-wrapper--error:focus-within {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.05);
+}
+
+/* Success state styling */
+.color-input-wrapper--success {
+  border-color: #10b981;
+  box-shadow: 0 1px 3px 0 rgba(16, 185, 129, 0.05);
+}
+
+.color-input-wrapper--success:focus-within {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.05);
+}
+
+/* Size variants */
+:host([size='small']) .color-input-wrapper {
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+:host([size='small']) .color-picker-input {
+  width: 20px;
+  height: 20px;
+}
+
+:host([size='small']) .hex-symbol,
+:host([size='small']) .color-text-input {
+  font-size: 13px;
+}
+
+:host([size='large']) .color-input-wrapper {
+  padding: 16px 20px;
+  gap: 16px;
+}
+
+:host([size='large']) .color-picker-input {
+  width: 28px;
+  height: 28px;
+}
+
+:host([size='large']) .hex-symbol,
+:host([size='large']) .color-text-input {
+  font-size: 17px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .color-input-wrapper {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .color-picker-input {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hex-symbol,
+  .color-text-input {
+    font-size: 14px;
+  }
+}

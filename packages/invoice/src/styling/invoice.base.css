@@ -1,0 +1,106 @@
+/**
+ * Unzer Invoice Widget - Base CSS Variables
+ * Naming Convention: --unzer-invoice-{component}-{property}-{modifier?}-{state?}
+ */
+
+:host {
+  /* Font Size Variations */
+  --unzer-invoice-font-size-extra-small: 11px;
+  --unzer-invoice-font-size-small: 12px;
+  --unzer-invoice-font-size-medium: 14px;
+  --unzer-invoice-font-size-large: 16px;
+  --unzer-invoice-font-size-extra-large: 18px;
+
+  /* Font Weight Variations */
+  --unzer-invoice-font-weight-light: 300;
+  --unzer-invoice-font-weight-normal: 400;
+  --unzer-invoice-font-weight-medium: 500;
+  --unzer-invoice-font-weight-semibold: 600;
+  --unzer-invoice-font-weight-bold: 700;
+
+  /* Core Colors */
+  --unzer-invoice-primary-color: #2563eb;
+  --unzer-invoice-secondary-color: #f3f4f6;
+  --unzer-invoice-background-color: #ffffff;
+  --unzer-invoice-text-color: #374151;
+  --unzer-invoice-border-color: #e5e7eb;
+
+  /* Color Variations */
+  --unzer-invoice-primary-color-light: #dbeafe;
+  --unzer-invoice-primary-color-dark: #1d4ed8;
+  --unzer-invoice-primary-color-contrast: #ffffff;
+  --unzer-invoice-text-color-muted: #6b7280;
+  --unzer-invoice-text-color-light: #9ca3af;
+
+  /* Surface Colors */
+  --unzer-invoice-surface-primary: #ffffff;
+  --unzer-invoice-surface-secondary: #f9fafb;
+  --unzer-invoice-surface-tertiary: #f3f4f6;
+
+  /* Spacing */
+  --unzer-invoice-spacing: 16px;
+  --unzer-invoice-spacing-tiny: 4px;
+  --unzer-invoice-spacing-small: 8px;
+  --unzer-invoice-spacing-medium: 16px;
+  --unzer-invoice-spacing-large: 24px;
+  --unzer-invoice-spacing-extra-large: 32px;
+
+  /* Borders */
+  --unzer-invoice-border-width: 1px;
+  --unzer-invoice-border-radius: 8px;
+  --unzer-invoice-border-radius-small: 4px;
+  --unzer-invoice-border-radius-medium: 8px;
+  --unzer-invoice-border-radius-large: 12px;
+  --unzer-invoice-border-radius-extra-large: 16px;
+
+  /* Effects */
+  --unzer-invoice-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --unzer-invoice-shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --unzer-invoice-shadow-large: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Info Button */
+  --unzer-invoice-info-button-background: #ffffff;
+  --unzer-invoice-info-button-text-color: #6b7280;
+  --unzer-invoice-info-button-border-color: #d1d5db;
+
+  --unzer-invoice-info-button-background-hover: #f9fafb;
+  --unzer-invoice-info-button-border-color-hover: #9ca3af;
+  --unzer-invoice-info-button-text-color-hover: #374151;
+
+  --unzer-invoice-info-button-background-active: #f3f4f6;
+  --unzer-invoice-info-button-border-color-active: #2563eb;
+
+  /* Modal */
+  --unzer-invoice-modal-overlay-color: rgba(0, 0, 0, 0.5);
+  --unzer-invoice-modal-background: #ffffff;
+  --unzer-invoice-modal-border-radius: 12px;
+  --unzer-invoice-modal-spacing: 24px;
+  --unzer-invoice-modal-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+  /* Banner */
+  --unzer-invoice-banner-label-font-size: 16px;
+  --unzer-invoice-banner-label-font-weight: 600;
+  --unzer-invoice-banner-label-text-color: #374151;
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    --unzer-invoice-spacing: 12px;
+    --unzer-invoice-modal-spacing: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    --unzer-invoice-spacing: 18px;
+    --unzer-invoice-modal-spacing: 28px;
+  }
+}
+
+/* Shadow DOM inheritance for component variables */
+@property --unzer-invoice-info-button-background {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-invoice-modal-overlay-color {
+  syntax: '<color>';
+  inherits: true;
+}

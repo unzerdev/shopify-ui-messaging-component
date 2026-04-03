@@ -1,0 +1,241 @@
+/**
+ * Unzer Installment Widget - Base CSS Variables
+ * Schema-based CSS custom properties with systematic naming
+ * 
+ * Naming Convention: --unzer-installments-{component}-{property}-{modifier?}-{state?}
+ */
+
+:host {
+  
+  /* Font Size Variations */
+  --unzer-installments-font-size-extra-small: 11px;
+  --unzer-installments-font-size-small: 12px;
+  --unzer-installments-font-size-medium: 14px;
+  --unzer-installments-font-size-large: 16px;
+  --unzer-installments-font-size-extra-large: 18px;
+  
+  /* Font Weight Variations */
+  --unzer-installments-font-weight-light: 300;
+  --unzer-installments-font-weight-normal: 400;
+  --unzer-installments-font-weight-medium: 500;
+  --unzer-installments-font-weight-semibold: 600;
+  --unzer-installments-font-weight-bold: 700;
+
+  /* Core Colors */
+  --unzer-installments-background-color: #ffffff;
+  --unzer-installments-text-color: #374151;
+  --unzer-installments-button-text-color: #9C9C9C;
+  --unzer-installments-border-color: #e5e7eb;
+  
+  /* Color Variations */
+  --unzer-installments-text-color-muted: #6b7280;
+  --unzer-installments-text-color-light: #9ca3af;
+  
+  /* Surface Colors */
+  --unzer-installments-surface-primary: #ffffff;
+  --unzer-installments-surface-secondary: #f9fafb;
+  --unzer-installments-surface-tertiary: #f3f4f6;
+  
+  /* Spacing */
+  --unzer-installments-spacing: 8px;
+  --unzer-installments-spacing-tiny: 4px;
+  --unzer-installments-spacing-small: 8px;
+  --unzer-installments-spacing-medium: 16px;
+  --unzer-installments-spacing-large: 24px;
+  --unzer-installments-spacing-extra-large: 32px;
+  
+  /* Borders */
+  --unzer-installments-border-width: 1px;
+  --unzer-installments-border-radius: 8px;
+  --unzer-installments-border-radius-small: 4px;
+  --unzer-installments-border-radius-medium: 8px;
+  --unzer-installments-border-radius-large: 12px;
+  --unzer-installments-border-radius-extra-large: 16px;
+  
+  /* Effects */
+  --unzer-installments-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --unzer-installments-shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --unzer-installments-shadow-large: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* ===========================================
+   * TIMELINE COMPONENT
+   * =========================================== */
+   
+  --unzer-installments-timeline-button-color: #2563eb;
+  --unzer-installments-timeline-progress-color: #10b981;
+  --unzer-installments-timeline-background: #f9fafb;
+  --unzer-installments-timeline-spacing: 12px;
+  --unzer-installments-timeline-text-muted: #d1d5db;
+  
+  /* Timeline Button States */
+  --unzer-installments-timeline-button-color-neutral: #d1d5db;
+  
+  /* Timeline States */
+  --unzer-installments-timeline-button-color-hover: #1d4ed8;
+  --unzer-installments-timeline-button-color-active: #1e40af;
+  --unzer-installments-timeline-button-color-disabled: #d1d5db;
+  
+  /* ===========================================
+   * NAVIGATION COMPONENT
+   * =========================================== */
+   
+  --unzer-installments-navigation-background: transparent;
+  --unzer-installments-navigation-spacing: 12px;
+  --unzer-installments-navigation-spacing-small: 8px;
+  --unzer-installments-navigation-spacing-tiny: 4px;
+  
+  /* Arrow Buttons */
+  --unzer-installments-arrow-button-color: #6b7280;
+  --unzer-installments-arrow-button-color-hover: #374151;
+  --unzer-installments-arrow-button-color-active: #1f2937;
+  --unzer-installments-arrow-button-color-disabled: #d1d5db;
+  --unzer-installments-arrow-button-background: transparent;
+  --unzer-installments-arrow-button-background-hover: #f9fafb;
+  
+  /* ===========================================
+   * PLANS COMPONENT
+   * =========================================== */
+   
+  /* Plans Container */
+  --unzer-installments-plans-container-background: transparent;
+  --unzer-installments-plans-container-padding: 8px;
+  --unzer-installments-plans-container-line-height: 1.4;
+  
+  /* Plan Buttons */
+  --unzer-installments-plan-button-background: #f9fafb;
+  --unzer-installments-plan-button-text-color: #374151;
+  --unzer-installments-plan-button-border-color: #e5e7eb;
+  --unzer-installments-plan-button-border-radius: 6px;
+  --unzer-installments-plan-button-spacing: 8px;
+  
+  /* Plan Button States */
+  --unzer-installments-plan-button-background-hover: #f3f4f6;
+  --unzer-installments-plan-button-border-color-hover: #2563eb;
+  --unzer-installments-plan-button-text-color-hover: #374151;
+  
+  --unzer-installments-plan-button-background-selected: #2563eb;
+  --unzer-installments-plan-button-border-color-selected: #2563eb;
+  --unzer-installments-plan-button-text-color-selected: #ffffff;
+  
+  --unzer-installments-plan-button-background-active: #1d4ed8;
+  --unzer-installments-plan-button-border-color-active: #1d4ed8;
+  
+  /* ===========================================
+   * INFO COMPONENT
+   * =========================================== */
+   
+  /* Info Button */
+  --unzer-installments-info-button-background: #ffffff;
+  --unzer-installments-info-button-text-color: #6b7280;
+  --unzer-installments-info-button-border-color: #d1d5db;
+  
+  /* Info Button States */
+  --unzer-installments-info-button-background-hover: #f9fafb;
+  --unzer-installments-info-button-border-color-hover: #9ca3af;
+  --unzer-installments-info-button-text-color-hover: #374151;
+  
+  --unzer-installments-info-button-background-active: #f3f4f6;
+  --unzer-installments-info-button-border-color-active: #2563eb;
+  
+  /* ===========================================
+   * MODAL COMPONENT
+   * =========================================== */
+   
+  --unzer-installments-modal-overlay-color: rgba(0, 0, 0, 0.5);
+  --unzer-installments-modal-background: #ffffff;
+  --unzer-installments-modal-border-radius: 12px;
+  --unzer-installments-modal-spacing: 24px;
+  --unzer-installments-modal-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  
+  /* ===========================================
+   * LABELS COMPONENT
+   * =========================================== */
+   
+  --unzer-installments-amount-label-font-size: 16px;
+  --unzer-installments-amount-label-font-weight: 600;
+  --unzer-installments-amount-label-text-color: #374151;
+  
+  /* ===========================================
+   * RESPONSIVE ADJUSTMENTS
+   * =========================================== */
+   
+  /* Small screens */
+  @media (max-width: 480px) {
+    --unzer-installments-spacing: 12px;
+    --unzer-installments-plan-button-spacing: 6px;
+    --unzer-installments-modal-spacing: 16px;
+  }
+  
+  /* Large screens */
+  @media (min-width: 1024px) {
+    --unzer-installments-spacing: 18px;
+    --unzer-installments-plan-button-spacing: 10px;
+    --unzer-installments-modal-spacing: 28px;
+  }
+}
+
+/* ===========================================
+ * CSS PROPERTY DECLARATIONS
+ * For Shadow DOM inheritance
+ * =========================================== */
+
+@property --unzer-installments-background-color {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-text-color {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-border-color {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-border-radius {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-installments-border-width {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-installments-spacing {
+  syntax: '<length>';
+  inherits: true;
+}
+
+/* Component Properties */
+@property --unzer-installments-timeline-button-color {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-navigation-spacing {
+  syntax: '<length>';
+  inherits: true;
+}
+
+@property --unzer-installments-plan-button-background {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-plan-button-background-selected {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-info-button-background {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --unzer-installments-modal-overlay-color {
+  syntax: '<color>';
+  inherits: true;
+}

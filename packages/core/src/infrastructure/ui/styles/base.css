@@ -1,0 +1,101 @@
+:host {
+  /* Base CSS Custom Properties */
+  --unzer-color-primary: #007bff;
+  --unzer-color-secondary: #6c757d;
+  --unzer-color-success: #28a745;
+  --unzer-color-danger: #dc3545;
+  --unzer-color-warning: #ffc107;
+  --unzer-color-info: #17a2b8;
+  --unzer-color-light: #f8f9fa;
+  --unzer-color-dark: #343a40;
+
+  /* Background Colors */
+  --unzer-bg-primary: var(--unzer-color-primary);
+  --unzer-bg-secondary: var(--unzer-color-secondary);
+  --unzer-bg-surface: #ffffff;
+  --unzer-bg-surface-variant: #f5f5f5;
+
+  /* Text Colors */
+  --unzer-text-primary: #212529;
+  --unzer-text-secondary: #6c757d;
+  --unzer-text-disabled: #adb5bd;
+  --unzer-text-inverse: #ffffff;
+
+  /* Border */
+
+  /* Spacing */
+  --unzer-spacing-xs: 0.25rem;
+  --unzer-spacing-sm: 0.5rem;
+  --unzer-spacing-md: 1rem;
+  --unzer-spacing-lg: 1.5rem;
+  --unzer-spacing-xl: 3rem;
+
+  /* Typography */
+  /* --unzer-font-family: Removed to allow inheritance from parent components */
+  --unzer-font-size-xs: 0.75rem;
+  --unzer-font-size-sm: 0.875rem;
+  --unzer-font-size-md: 1rem;
+  --unzer-font-size-lg: 1.125rem;
+  --unzer-font-size-xl: 1.25rem;
+  --unzer-line-height: 1.5;
+
+  /* Shadows */
+  --unzer-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --unzer-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --unzer-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --unzer-transition: all 0.2s ease-in-out;
+
+  /* Focus */
+  --unzer-focus-ring: 0 0 0 2px rgba(0, 123, 255, 0.25);
+
+  /* Component sizing */
+  --unzer-size-sm: 2rem;
+  --unzer-size-md: 2.5rem;
+  --unzer-size-lg: 3rem;
+
+  display: block;
+  font-family: var(--unzer-font-family);
+  line-height: var(--unzer-line-height);
+  color: var(--unzer-text-primary);
+}
+
+:host([theme='dark']) {
+  --unzer-bg-surface: #1a1a1a;
+  --unzer-bg-surface-variant: #2a2a2a;
+  --unzer-text-primary: #ffffff;
+  --unzer-text-secondary: #cccccc;
+  --unzer-text-disabled: #666666;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+:host([disabled]) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Focus styles */
+:host(:focus) {
+  outline: none;
+}
+
+:host(:focus-visible) {
+  box-shadow: var(--unzer-focus-ring);
+}
+
+/* Size variants */
+:host([size='small']) {
+  font-size: var(--unzer-font-size-sm);
+}
+
+:host([size='medium']) {
+  font-size: var(--unzer-font-size-md);
+}
+
+:host([size='large']) {
+  font-size: var(--unzer-font-size-lg);
+}
