@@ -68,6 +68,8 @@ export const invoiceRu: TranslationMap = {
   'invoice.schema.field.shadowDesc': 'Добавить тень к компонентам',
   'invoice.schema.field.widgetWidth': 'Ширина виджета (%)',
   'invoice.schema.field.widgetWidthDesc': 'Ширина виджета в процентах от контейнера',
+  'invoice.schema.field.verticalMargin': 'Вертикальный отступ (px)',
+  'invoice.schema.field.verticalMarginDesc': 'Верхний и нижний отступ виджета',
   'invoice.schema.field.infoIconColor': 'Цвет иконки информации',
   'invoice.schema.field.infoLinkColor': 'Цвет ссылки информации',
   'invoice.schema.field.expiryDays': 'Срок оплаты (дни)',

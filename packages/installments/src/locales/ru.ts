@@ -122,6 +122,8 @@ export const installmentsRu: TranslationMap = {
   'installments.schema.field.shadowDesc': 'Добавить тень к компонентам',
   'installments.schema.field.widgetWidth': 'Ширина виджета (%)',
   'installments.schema.field.widgetWidthDesc': 'Ширина виджета в процентах от контейнера',
+  'installments.schema.field.verticalMargin': 'Вертикальный отступ (px)',
+  'installments.schema.field.verticalMarginDesc': 'Верхний и нижний отступ виджета',
   'installments.schema.field.demo': 'Демо-режим',
   'installments.schema.field.demoDesc': 'Показать демо-данные без API-ключа',
   'installments.schema.field.previewMode': 'Режим предпросмотра',

@@ -68,6 +68,8 @@ export const invoicePt: TranslationMap = {
   'invoice.schema.field.shadowDesc': 'Adicionar sombra aos componentes',
   'invoice.schema.field.widgetWidth': 'Largura do widget (%)',
   'invoice.schema.field.widgetWidthDesc': 'Largura do widget como percentagem do contentor',
+  'invoice.schema.field.verticalMargin': 'Margem vertical (px)',
+  'invoice.schema.field.verticalMarginDesc': 'Margem superior e inferior do widget',
   'invoice.schema.field.infoIconColor': 'Cor do ícone de informação',
   'invoice.schema.field.infoLinkColor': 'Cor do link de informação',
   'invoice.schema.field.expiryDays': 'Prazo de pagamento (dias)',

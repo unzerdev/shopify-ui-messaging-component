@@ -124,6 +124,8 @@ export const installmentsFr: TranslationMap = {
   'installments.schema.field.widgetWidthDesc': 'Largeur du widget en pourcentage du conteneur',
   'installments.schema.field.widgetHeight': 'Hauteur du widget (px)',
   'installments.schema.field.widgetHeightDesc': 'Hauteur fixe du widget (0 = automatique)',
+  'installments.schema.field.verticalMargin': 'Marge verticale (px)',
+  'installments.schema.field.verticalMarginDesc': 'Marge en haut et en bas du widget',
   'installments.schema.field.demo': 'Mode démo',
   'installments.schema.field.demoDesc': 'Afficher les données de démonstration sans clé API',
   'installments.schema.field.previewMode': 'Mode aperçu',

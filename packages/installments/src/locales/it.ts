@@ -122,6 +122,8 @@ export const installmentsIt: TranslationMap = {
   'installments.schema.field.shadowDesc': 'Aggiungi ombra ai componenti',
   'installments.schema.field.widgetWidth': 'Larghezza widget (%)',
   'installments.schema.field.widgetWidthDesc': 'Larghezza del widget in percentuale del contenitore',
+  'installments.schema.field.verticalMargin': 'Margine verticale (px)',
+  'installments.schema.field.verticalMarginDesc': 'Margine superiore e inferiore del widget',
   'installments.schema.field.demo': 'Modalità demo',
   'installments.schema.field.demoDesc': 'Mostra dati demo senza chiave API',
   'installments.schema.field.previewMode': 'Modalità anteprima',

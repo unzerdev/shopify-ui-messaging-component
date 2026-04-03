@@ -39,6 +39,8 @@ export interface WidgetStyles {
   infoLinkColor?: string;
   /** Label shown on the info link text (default: "Learn more") */
   infoLinkText?: string;
+  /** Vertical margin (top and bottom) in pixels (0–64, default: 0) */
+  verticalMargin?: number;
 }
 
 /**
@@ -64,4 +66,5 @@ export const WIDGET_STYLES_CSS_MAP: Record<string, { suffix: string; unit?: stri
   borderWidth: { suffix: 'border-width', unit: 'px' },
   infoIconColor: { suffix: 'info-icon-color' },
   infoLinkColor: { suffix: 'info-link-color' },
+  verticalMargin: { suffix: 'vertical-margin', unit: 'px' },
 };

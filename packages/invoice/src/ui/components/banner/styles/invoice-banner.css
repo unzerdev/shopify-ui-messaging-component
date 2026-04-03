@@ -19,12 +19,15 @@
   --fallback-spacing: var(--unzer-invoice-spacing, var(--unzer-spacing-md, 10px));
   --fallback-shadow: var(--unzer-invoice-shadow, var(--unzer-shadow, none));
   --fallback-widget-width: var(--unzer-invoice-widget-width, 100%);
+  --fallback-vertical-margin: var(--unzer-invoice-vertical-margin, 0px);
   --fallback-primary-color: var(--unzer-invoice-primary-color, var(--unzer-primary-color, #e91e63));
 
   font-family: var(--fallback-font-family);
   color: var(--fallback-text-color);
   font-size: var(--fallback-font-size);
   font-weight: var(--fallback-font-weight);
+  margin-top: var(--fallback-vertical-margin);
+  margin-bottom: var(--fallback-vertical-margin);
 }
 
 .banner-container {

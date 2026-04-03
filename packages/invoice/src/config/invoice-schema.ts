@@ -420,6 +420,25 @@ export const INVOICE_CONFIG_SCHEMA: ConfigurationSchema = {
                 cssScope: 'both',
                 cssUnit: '%'
               }
+            },
+            {
+              key: 'verticalMargin',
+              type: 'range',
+              labelKey: 'invoice.schema.field.verticalMargin',
+              descriptionKey: 'invoice.schema.field.verticalMarginDesc',
+              defaultValue: 0,
+              validation: {
+                min: 0,
+                max: 64,
+                step: 1
+              },
+              metadata: {
+                isStyle: true,
+                width: 'full',
+                cssVariable: '--unzer-invoice-vertical-margin',
+                cssScope: 'both',
+                cssUnit: 'px'
+              }
             }
           ]
         }

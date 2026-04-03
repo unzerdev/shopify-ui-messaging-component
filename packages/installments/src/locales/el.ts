@@ -122,6 +122,8 @@ export const installmentsEl: TranslationMap = {
   'installments.schema.field.shadowDesc': 'Προσθήκη σκιάς στα στοιχεία',
   'installments.schema.field.widgetWidth': 'Πλάτος widget (%)',
   'installments.schema.field.widgetWidthDesc': 'Πλάτος widget ως ποσοστό του κοντέινερ',
+  'installments.schema.field.verticalMargin': 'Κάθετο περιθώριο (px)',
+  'installments.schema.field.verticalMarginDesc': 'Πάνω και κάτω περιθώριο του widget',
   'installments.schema.field.demo': 'Λειτουργία επίδειξης',
   'installments.schema.field.demoDesc': 'Εμφάνιση δεδομένων επίδειξης χωρίς κλειδί API',
   'installments.schema.field.previewMode': 'Λειτουργία προεπισκόπησης',

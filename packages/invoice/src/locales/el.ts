@@ -68,6 +68,8 @@ export const invoiceEl: TranslationMap = {
   'invoice.schema.field.shadowDesc': 'Προσθήκη σκιάς στα στοιχεία',
   'invoice.schema.field.widgetWidth': 'Πλάτος widget (%)',
   'invoice.schema.field.widgetWidthDesc': 'Πλάτος widget ως ποσοστό του κοντέινερ',
+  'invoice.schema.field.verticalMargin': 'Κάθετο περιθώριο (px)',
+  'invoice.schema.field.verticalMarginDesc': 'Πάνω και κάτω περιθώριο του widget',
   'invoice.schema.field.infoIconColor': 'Χρώμα εικονιδίου πληροφοριών',
   'invoice.schema.field.infoLinkColor': 'Χρώμα συνδέσμου πληροφοριών',
   'invoice.schema.field.expiryDays': 'Προθεσμία πληρωμής (ημέρες)',

@@ -68,6 +68,8 @@ export const invoiceDe: TranslationMap = {
   'invoice.schema.field.shadowDesc': 'Schatten zu Komponenten hinzufügen',
   'invoice.schema.field.widgetWidth': 'Widget-Breite (%)',
   'invoice.schema.field.widgetWidthDesc': 'Breite des Widgets in Prozent des Containers',
+  'invoice.schema.field.verticalMargin': 'Vertikaler Abstand (px)',
+  'invoice.schema.field.verticalMarginDesc': 'Oberer und unterer Abstand um das Widget',
   'invoice.schema.field.infoIconColor': 'Info-Symbol Farbe',
   'invoice.schema.field.infoLinkColor': 'Info-Link Farbe',
   'invoice.schema.field.expiryDays': 'Zahlungsfrist (Tage)',

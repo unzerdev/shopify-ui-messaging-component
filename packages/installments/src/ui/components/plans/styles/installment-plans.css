@@ -27,6 +27,7 @@
   --fallback-shadow: var(--unzer-installments-shadow, var(--unzer-shadow, none));
   --fallback-widget-width: var(--unzer-installments-widget-width, 100%);
   --fallback-widget-height: var(--unzer-installments-widget-height, auto);
+  --fallback-vertical-margin: var(--unzer-installments-vertical-margin, 0px);
   --fallback-primary-color: var(--unzer-installments-primary-color, var(--unzer-primary-color, #007bff));
 
   /* Apply CSS variables with fallback chains */
@@ -39,6 +40,8 @@
   border-color: var(--fallback-border-color);
   background-color: var(--fallback-bg-color);
   box-shadow: var(--fallback-shadow);
+  margin-top: var(--fallback-vertical-margin);
+  margin-bottom: var(--fallback-vertical-margin);
 }
 
 .plan-details-inline {

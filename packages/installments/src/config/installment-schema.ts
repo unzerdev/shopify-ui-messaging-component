@@ -589,6 +589,25 @@ export const INSTALLMENT_CONFIG_SCHEMA: ConfigurationSchema = {
                 cssScope: 'both',
                 cssUnit: 'px'
               }
+            },
+            {
+              key: 'verticalMargin',
+              type: 'range',
+              labelKey: 'installments.schema.field.verticalMargin',
+              descriptionKey: 'installments.schema.field.verticalMarginDesc',
+              defaultValue: 0,
+              validation: {
+                min: 0,
+                max: 64,
+                step: 1
+              },
+              metadata: {
+                isStyle: true,
+                width: 'full',
+                cssVariable: '--unzer-installments-vertical-margin',
+                cssScope: 'both',
+                cssUnit: 'px'
+              }
             }
           ]
         }

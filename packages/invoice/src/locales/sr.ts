@@ -68,6 +68,8 @@ export const invoiceSr: TranslationMap = {
   'invoice.schema.field.shadowDesc': 'Dodaj senku na komponente',
   'invoice.schema.field.widgetWidth': 'Širina widgeta (%)',
   'invoice.schema.field.widgetWidthDesc': 'Širina widgeta kao procenat kontejnera',
+  'invoice.schema.field.verticalMargin': 'Vertikalna margina (px)',
+  'invoice.schema.field.verticalMarginDesc': 'Gornja i donja margina widgeta',
   'invoice.schema.field.infoIconColor': 'Boja ikone informacija',
   'invoice.schema.field.infoLinkColor': 'Boja linka informacija',
   'invoice.schema.field.expiryDays': 'Rok plaćanja (dani)',

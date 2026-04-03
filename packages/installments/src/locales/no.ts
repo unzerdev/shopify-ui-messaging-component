@@ -122,6 +122,8 @@ export const installmentsNo: TranslationMap = {
   'installments.schema.field.shadowDesc': 'Legg til skygge på komponenter',
   'installments.schema.field.widgetWidth': 'Widgetbredde (%)',
   'installments.schema.field.widgetWidthDesc': 'Bredden på widgeten som prosent av beholderen',
+  'installments.schema.field.verticalMargin': 'Vertikal marg (px)',
+  'installments.schema.field.verticalMarginDesc': 'Topp- og bunnmarg rundt widgeten',
   'installments.schema.field.demo': 'Demomodus',
   'installments.schema.field.demoDesc': 'Vis demodata uten API-nøkkel',
   'installments.schema.field.previewMode': 'Forhåndsvisningsmodus',

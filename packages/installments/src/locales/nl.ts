@@ -124,6 +124,8 @@ export const installmentsNl: TranslationMap = {
   'installments.schema.field.widgetWidthDesc': 'Breedte van de widget als percentage van de container',
   'installments.schema.field.widgetHeight': 'Widgethoogte (px)',
   'installments.schema.field.widgetHeightDesc': 'Vaste hoogte van de widget (0 = automatisch)',
+  'installments.schema.field.verticalMargin': 'Verticale marge (px)',
+  'installments.schema.field.verticalMarginDesc': 'Boven- en ondermarge rond de widget',
   'installments.schema.field.demo': 'Demomodus',
   'installments.schema.field.demoDesc': 'Demogegevens tonen zonder API-sleutel',
   'installments.schema.field.previewMode': 'Voorbeeldmodus',

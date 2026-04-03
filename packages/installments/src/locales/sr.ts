@@ -122,6 +122,8 @@ export const installmentsSr: TranslationMap = {
   'installments.schema.field.shadowDesc': 'Dodaj senku na komponente',
   'installments.schema.field.widgetWidth': 'Širina widgeta (%)',
   'installments.schema.field.widgetWidthDesc': 'Širina widgeta kao procenat kontejnera',
+  'installments.schema.field.verticalMargin': 'Vertikalna margina (px)',
+  'installments.schema.field.verticalMarginDesc': 'Gornja i donja margina widgeta',
   'installments.schema.field.demo': 'Demo režim',
   'installments.schema.field.demoDesc': 'Prikaži demo podatke bez API ključa',
   'installments.schema.field.previewMode': 'Režim pregleda',
