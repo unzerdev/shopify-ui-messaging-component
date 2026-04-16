@@ -9,16 +9,11 @@ export const invoiceNl: TranslationMap = {
   // Details
   'invoice.details.title': 'Factuur',
   'invoice.details.close': 'Sluiten',
-  'invoice.details.description': 'Shop nu, betaal later met factuur. Geef gewoon uw e-mailadres en factuuradres op om uw aankoop af te ronden.',
-  'invoice.details.benefit1': 'Betaal tot {days} dagen na verzending van uw bestelling.',
-  'invoice.details.benefit2': 'Geen extra kosten voor betaling per factuur.',
-  'invoice.details.benefit3': 'Ontvang uw factuur gemakkelijk per e-mail.',
-  'invoice.details.benefit4': 'Kies voor betaling via bankoverschrijving of direct online.',
-  'invoice.details.nextSteps': 'Volgende stappen:',
-  'invoice.details.step1': 'Vul uw gegevens in (e-mail en factuuradres) om uw bestelling te bevestigen.',
-  'invoice.details.step2': 'Kies Unzer bij het afrekenen om later per factuur te betalen.',
-  'invoice.details.step3': 'Ontvang uw factuur per e-mail zodra uw bestelling is verzonden.',
-  'invoice.details.step4': 'Betaal binnen {days} dagen via bankoverschrijving of online — snel en veilig.',
+  'invoice.details.description': 'Shop nu en betaal later. Vul uw e-mail, adresgegevens en geboortedatum in bij het afrekenen om door te gaan met de factuurkoop.',
+  'invoice.details.detailsTitle': 'Details',
+  'invoice.details.benefit1': 'Betaal tot {days} dagen na verzending van uw bestelling en het versturen van de factuur',
+  'invoice.details.benefit2': 'Geen extra kosten',
+  'invoice.details.benefit3': 'Betalingsgegevens worden per e-mail verzonden',
 
   // Info
   'invoice.info.learnMore': 'Meer informatie',

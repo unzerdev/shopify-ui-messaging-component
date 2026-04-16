@@ -9,16 +9,11 @@ export const invoiceDe: TranslationMap = {
   // Details
   'invoice.details.title': 'Rechnung',
   'invoice.details.close': 'Schließen',
-  'invoice.details.description': 'Jetzt einkaufen, später per Rechnung bezahlen. Geben Sie einfach Ihre E-Mail-Adresse und Rechnungsadresse an, um Ihren Kauf abzuschließen.',
-  'invoice.details.benefit1': 'Bezahlen Sie bis zu {days} Tage nach Versand Ihrer Bestellung.',
-  'invoice.details.benefit2': 'Keine zusätzlichen Kosten für die Zahlung per Rechnung.',
-  'invoice.details.benefit3': 'Erhalten Sie Ihre Rechnung bequem per E-Mail.',
-  'invoice.details.benefit4': 'Wählen Sie zwischen Banküberweisung oder Online-Zahlung.',
-  'invoice.details.nextSteps': 'Nächste Schritte:',
-  'invoice.details.step1': 'Geben Sie Ihre Daten (E-Mail und Rechnungsadresse) ein, um Ihre Bestellung zu bestätigen.',
-  'invoice.details.step2': 'Wählen Sie Unzer an der Kasse, um später per Rechnung zu bezahlen.',
-  'invoice.details.step3': 'Erhalten Sie Ihre Rechnung per E-Mail, sobald Ihre Bestellung versandt wurde.',
-  'invoice.details.step4': 'Bezahlen Sie innerhalb von {days} Tagen per Banküberweisung oder online — schnell und sicher.',
+  'invoice.details.description': 'Jetzt einkaufen und später bezahlen. Geben Sie Ihre E-Mail-Adresse, Adressdaten und Ihr Geburtsdatum an der Kasse ein, um mit dem Rechnungskauf fortzufahren.',
+  'invoice.details.detailsTitle': 'Details',
+  'invoice.details.benefit1': 'Bezahlen Sie bis zu {days} Tage nach Versand Ihrer Bestellung und Erhalt der Rechnung',
+  'invoice.details.benefit2': 'Keine zusätzlichen Kosten',
+  'invoice.details.benefit3': 'Zahlungsdetails werden per E-Mail gesendet',
 
   // Info
   'invoice.info.learnMore': 'Mehr erfahren',

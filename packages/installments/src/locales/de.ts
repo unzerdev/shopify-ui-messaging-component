@@ -2,9 +2,13 @@ import type { TranslationMap } from '@unzer/messaging-core';
 
 export const installmentsDe: TranslationMap = {
   // Details
-  'installments.details.title': 'Ratenkauf',
+  'installments.details.title': 'Ratenzahlung',
   'installments.details.close': 'Schließen',
-  'installments.details.description': 'Teilen Sie Ihren Einkauf in einfache monatliche Raten auf. Wählen Sie den Plan, der am besten zu Ihnen passt — schnelle Genehmigung, transparente Kosten und keine versteckten Gebühren.',
+  'installments.details.description': 'Jetzt einkaufen und in Raten bezahlen. Geben Sie Ihre E-Mail-Adresse, Adressdaten und Ihr Geburtsdatum an der Kasse ein, um mit dem Ratenkauf fortzufahren.',
+  'installments.details.detailsTitle': 'Details',
+  'installments.details.benefit1': 'Bezahlen Sie in Raten, nachdem Ihre Bestellung versandt und die Rechnung gesendet wurde',
+  'installments.details.benefit2': 'Keine zusätzlichen Kosten',
+  'installments.details.benefit3': 'Zahlungsdetails werden per E-Mail gesendet',
   'installments.details.purchaseLabel': 'Gesamtbetrag des Einkaufs',
   'installments.details.purchaseAmount': 'KAUFBETRAG',
   'installments.details.installmentsLabel': 'Anzahl der monatlichen Zahlungen',
@@ -14,10 +18,6 @@ export const installmentsDe: TranslationMap = {
   'installments.details.installmentCount': '{count} Raten',
   'installments.details.total': 'GESAMT: ',
   'installments.details.noSelectedPlan': 'Kein Plan ausgewählt',
-  'installments.details.nextSteps': 'Nächste Schritte:',
-  'installments.details.step1': 'Wählen Sie Unzer an der Kasse, um später per Ratenzahlung zu bezahlen.',
-  'installments.details.step2': 'Erhalten Sie eine sofortige Entscheidung und bestätigen Sie Ihren Kauf.',
-  'installments.details.step3': 'Lehnen Sie sich zurück — die Zahlungen werden automatisch jeden Monat abgebucht.',
 
   // Plan
   'installments.plan.paymentSchedule': 'Zahlungsplan:',

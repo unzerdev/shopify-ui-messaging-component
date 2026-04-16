@@ -48,7 +48,6 @@ export class UnzerInvoiceDetails extends UnzerElement {
         <!-- Header -->
         <header class="details-header">
           <div class="header-left">
-            ${this.unzerLogoDisplay ? html`<unzer-invoice-logo .variant="${this.unzerLogoDisplay === 'unzer-logo' ? 'logo' : this.unzerLogoDisplay}"></unzer-invoice-logo>` : ''}
             <span class="header-title">${this.t('invoice.details.title')}</span>
           </div>
           <button
@@ -67,48 +66,24 @@ export class UnzerInvoiceDetails extends UnzerElement {
           ${this.t('invoice.details.description')}
         </p>
 
-        <!-- Benefits -->
-        <ul class="benefits-list">
-          <li class="benefit-item">
-            <span class="benefit-icon">${this.renderBenefitIcon()}</span>
-            <span class="benefit-text">${this.tParams('invoice.details.benefit1', { days: String(this.expiryDays) })}</span>
-          </li>
-          <li class="benefit-item">
-            <span class="benefit-icon">${this.renderBenefitIcon()}</span>
-            <span class="benefit-text">${this.t('invoice.details.benefit2')}</span>
-          </li>
-          <li class="benefit-item">
-            <span class="benefit-icon">${this.renderBenefitIcon()}</span>
-            <span class="benefit-text">${this.t('invoice.details.benefit3')}</span>
-          </li>
-          <li class="benefit-item">
-            <span class="benefit-icon">${this.renderBenefitIcon()}</span>
-            <span class="benefit-text">${this.t('invoice.details.benefit4')}</span>
-          </li>
-        </ul>
-
-        <!-- Next Steps -->
-        <footer class="details-footer">
-          <h3 class="footer-title">${this.t('invoice.details.nextSteps')}</h3>
-          <ol class="steps-list">
-            <li class="step">
-              <span class="step-number">1</span>
-              <span class="step-text">${this.t('invoice.details.step1')}</span>
+        <!-- Details -->
+        <div class="benefits-section">
+          <h3 class="benefits-title">${this.t('invoice.details.detailsTitle')}</h3>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="benefit-icon">${this.renderBenefitIcon()}</span>
+              <span class="benefit-text">${this.tParams('invoice.details.benefit1', { days: String(this.expiryDays) })}</span>
             </li>
-            <li class="step">
-              <span class="step-number">2</span>
-              <span class="step-text">${this.t('invoice.details.step2')}</span>
+            <li class="benefit-item">
+              <span class="benefit-icon">${this.renderBenefitIcon()}</span>
+              <span class="benefit-text">${this.t('invoice.details.benefit2')}</span>
             </li>
-            <li class="step">
-              <span class="step-number">3</span>
-              <span class="step-text">${this.t('invoice.details.step3')}</span>
+            <li class="benefit-item">
+              <span class="benefit-icon">${this.renderBenefitIcon()}</span>
+              <span class="benefit-text">${this.t('invoice.details.benefit3')}</span>
             </li>
-            <li class="step">
-              <span class="step-number">4</span>
-              <span class="step-text">${this.tParams('invoice.details.step4', { days: String(this.expiryDays) })}</span>
-            </li>
-          </ol>
-        </footer>
+          </ul>
+        </div>
       </div>
     `;
   }

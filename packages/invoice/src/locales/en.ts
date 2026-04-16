@@ -9,16 +9,11 @@ export const invoiceEn: TranslationMap = {
   // Details
   'invoice.details.title': 'Invoice',
   'invoice.details.close': 'Close',
-  'invoice.details.description': 'Shop now, pay later with Invoice. Just provide your email and address details to complete your purchase.',
-  'invoice.details.benefit1': 'Pay up to {days} days after your order is shipped.',
-  'invoice.details.benefit2': 'No extra costs for paying by invoice.',
-  'invoice.details.benefit3': 'Receive your invoice conveniently by email.',
-  'invoice.details.benefit4': 'Choose to pay via bank transfer or directly online.',
-  'invoice.details.nextSteps': 'Next steps:',
-  'invoice.details.step1': 'Provide your details (email and billing address) to confirm your order.',
-  'invoice.details.step2': 'Choose Unzer at checkout to pay later with Invoice payment.',
-  'invoice.details.step3': 'Receive your invoice by email once your order has been shipped.',
-  'invoice.details.step4': 'Pay within {days} days via bank transfer or online — quick and secure.',
+  'invoice.details.description': 'Shop now and pay later. Enter your email, address details, and date of birth at checkout to continue with Invoice purchase.',
+  'invoice.details.detailsTitle': 'Details',
+  'invoice.details.benefit1': 'Pay up to {days} days after your order is shipped and invoice is sent',
+  'invoice.details.benefit2': 'No extra cost',
+  'invoice.details.benefit3': 'Payment details sent by email',
 
   // Info
   'invoice.info.learnMore': 'Learn more',

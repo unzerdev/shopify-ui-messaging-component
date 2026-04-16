@@ -9,16 +9,11 @@ export const invoiceFr: TranslationMap = {
   // Details
   'invoice.details.title': 'Facture',
   'invoice.details.close': 'Fermer',
-  'invoice.details.description': 'Achetez maintenant, payez plus tard par facture. Fournissez simplement votre e-mail et votre adresse de facturation pour finaliser votre achat.',
-  'invoice.details.benefit1': 'Payez jusqu\'à {days} jours après l\'expédition de votre commande.',
-  'invoice.details.benefit2': 'Aucun frais supplémentaire pour le paiement par facture.',
-  'invoice.details.benefit3': 'Recevez votre facture confortablement par e-mail.',
-  'invoice.details.benefit4': 'Choisissez de payer par virement bancaire ou directement en ligne.',
-  'invoice.details.nextSteps': 'Prochaines étapes :',
-  'invoice.details.step1': 'Fournissez vos coordonnées (e-mail et adresse de facturation) pour confirmer votre commande.',
-  'invoice.details.step2': 'Choisissez Unzer à la caisse pour payer plus tard par facture.',
-  'invoice.details.step3': 'Recevez votre facture par e-mail une fois votre commande expédiée.',
-  'invoice.details.step4': 'Payez dans les {days} jours par virement bancaire ou en ligne — rapide et sécurisé.',
+  'invoice.details.description': 'Achetez maintenant et payez plus tard. Entrez votre e-mail, vos coordonnées et votre date de naissance à la caisse pour continuer avec l\'achat par facture.',
+  'invoice.details.detailsTitle': 'Détails',
+  'invoice.details.benefit1': 'Payez jusqu\'à {days} jours après l\'expédition de votre commande et l\'envoi de la facture',
+  'invoice.details.benefit2': 'Aucun frais supplémentaire',
+  'invoice.details.benefit3': 'Détails de paiement envoyés par e-mail',
 
   // Info
   'invoice.info.learnMore': 'En savoir plus',

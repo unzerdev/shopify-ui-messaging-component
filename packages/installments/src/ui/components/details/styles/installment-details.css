@@ -110,6 +110,60 @@
   margin: 0;
 }
 
+/* === 2b. BENEFITS SECTION === */
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefits-title {
+  font-family: var(--unzer-installments-font-family, system-ui, sans-serif);
+  font-size: calc(var(--unzer-installments-font-size, 15px) + 1px);
+  font-weight: calc(var(--unzer-installments-font-weight, 400) + 300);
+  color: var(--unzer-installments-text-color, #000000);
+  margin: 0;
+  padding: 0;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0 40px;
+  list-style: none;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.benefit-text {
+  font-family: var(--unzer-installments-font-family, system-ui, sans-serif);
+  font-size: var(--unzer-installments-font-size, 15px);
+  font-weight: var(--unzer-installments-font-weight, 450);
+  color: var(--unzer-installments-text-color, #000000);
+  line-height: 1.4;
+}
+
 /* === 3 & 4. FIELD ROWS (Purchase Amount + Installments) === */
 .field-row {
   display: flex;
@@ -352,6 +406,10 @@
     width: 100%;
   }
 
+  .benefits-list {
+    padding: 0 20px;
+  }
+
   .summary-card {
     flex-direction: column;
     gap: 16px;
@@ -369,6 +427,18 @@
   }
 
   .description {
+    font-size: calc(var(--unzer-installments-font-size, 15px) - 1px);
+  }
+
+  .benefits-list {
+    padding: 0 8px;
+  }
+
+  .benefits-title {
+    font-size: calc(var(--unzer-installments-font-size, 15px) - 1px);
+  }
+
+  .benefit-text {
     font-size: calc(var(--unzer-installments-font-size, 15px) - 1px);
   }
 

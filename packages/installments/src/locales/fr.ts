@@ -2,9 +2,13 @@ import type { TranslationMap } from '@unzer/messaging-core';
 
 export const installmentsFr: TranslationMap = {
   // Details
-  'installments.details.title': 'Versement',
+  'installments.details.title': 'Versements',
   'installments.details.close': 'Fermer',
-  'installments.details.description': 'Divisez votre achat en mensualités faciles. Choisissez le plan qui vous convient le mieux — approbation rapide, coûts transparents et sans frais cachés.',
+  'installments.details.description': 'Achetez maintenant et payez en plusieurs fois. Entrez votre e-mail, vos coordonnées et votre date de naissance à la caisse pour continuer avec l\'achat en plusieurs fois.',
+  'installments.details.detailsTitle': 'Détails',
+  'installments.details.benefit1': 'Payez en plusieurs fois après l\'expédition de votre commande et l\'envoi de la facture',
+  'installments.details.benefit2': 'Aucun frais supplémentaire',
+  'installments.details.benefit3': 'Détails de paiement envoyés par e-mail',
   'installments.details.purchaseLabel': 'Montant total de l\'achat',
   'installments.details.purchaseAmount': 'MONTANT D\'ACHAT',
   'installments.details.installmentsLabel': 'Nombre de mensualités mensuelles',
@@ -14,10 +18,6 @@ export const installmentsFr: TranslationMap = {
   'installments.details.installmentCount': '{count} Mensualités',
   'installments.details.total': 'TOTAL : ',
   'installments.details.noSelectedPlan': 'Aucun plan sélectionné',
-  'installments.details.nextSteps': 'Prochaines étapes :',
-  'installments.details.step1': 'Choisissez Unzer à la caisse pour payer plus tard par paiement échelonné.',
-  'installments.details.step2': 'Obtenez une décision instantanée et confirmez votre achat.',
-  'installments.details.step3': 'Détendez-vous — les paiements sont effectués automatiquement chaque mois.',
 
   // Plan
   'installments.plan.paymentSchedule': 'Échéancier de paiement :',

@@ -2,9 +2,13 @@ import type { TranslationMap } from '@unzer/messaging-core';
 
 export const installmentsEn: TranslationMap = {
   // Details
-  'installments.details.title': 'Installment',
+  'installments.details.title': 'Installments',
   'installments.details.close': 'Close',
-  'installments.details.description': 'Split your purchase into easy monthly payments. Choose the plan that works best for you — quick approval, transparent costs, and no hidden fees.',
+  'installments.details.description': 'Shop now and pay in installments. Enter your email, address details, and date of birth at checkout to continue with installments purchase.',
+  'installments.details.detailsTitle': 'Details',
+  'installments.details.benefit1': 'Pay in Installments after your order is shipped and invoice is sent',
+  'installments.details.benefit2': 'No extra cost',
+  'installments.details.benefit3': 'Payment details sent by email',
   'installments.details.purchaseLabel': 'Total purchase amount',
   'installments.details.purchaseAmount': 'PURCHASE AMOUNT',
   'installments.details.installmentsLabel': 'Number of monthly payments',
@@ -14,10 +18,6 @@ export const installmentsEn: TranslationMap = {
   'installments.details.installmentCount': '{count} Installments',
   'installments.details.total': 'TOTAL: ',
   'installments.details.noSelectedPlan': 'No plan selected',
-  'installments.details.nextSteps': 'Next steps:',
-  'installments.details.step1': 'Choose Unzer at checkout to pay later with Installment payment.',
-  'installments.details.step2': 'Get an instant decision and confirm your purchase.',
-  'installments.details.step3': 'Sit back — payments are made automatically each month.',
 
   // Plan
   'installments.plan.paymentSchedule': 'Payment Schedule:',

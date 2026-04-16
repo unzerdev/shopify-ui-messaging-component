@@ -2,9 +2,13 @@ import type { TranslationMap } from '@unzer/messaging-core';
 
 export const installmentsNl: TranslationMap = {
   // Details
-  'installments.details.title': 'Termijnbetaling',
+  'installments.details.title': 'Termijnbetalingen',
   'installments.details.close': 'Sluiten',
-  'installments.details.description': 'Verdeel uw aankoop in eenvoudige maandelijkse termijnen. Kies het plan dat het beste bij u past — snelle goedkeuring, transparante kosten en geen verborgen kosten.',
+  'installments.details.description': 'Shop nu en betaal in termijnen. Vul uw e-mail, adresgegevens en geboortedatum in bij het afrekenen om door te gaan met de termijnkoop.',
+  'installments.details.detailsTitle': 'Details',
+  'installments.details.benefit1': 'Betaal in termijnen nadat uw bestelling is verzonden en de factuur is verstuurd',
+  'installments.details.benefit2': 'Geen extra kosten',
+  'installments.details.benefit3': 'Betalingsgegevens worden per e-mail verzonden',
   'installments.details.purchaseLabel': 'Totaal aankoopbedrag',
   'installments.details.purchaseAmount': 'AANKOOPBEDRAG',
   'installments.details.installmentsLabel': 'Aantal maandelijkse betalingen',
@@ -14,10 +18,6 @@ export const installmentsNl: TranslationMap = {
   'installments.details.installmentCount': '{count} Termijnen',
   'installments.details.total': 'TOTAAL: ',
   'installments.details.noSelectedPlan': 'Geen plan geselecteerd',
-  'installments.details.nextSteps': 'Volgende stappen:',
-  'installments.details.step1': 'Kies Unzer bij het afrekenen om later te betalen met termijnbetaling.',
-  'installments.details.step2': 'Ontvang een directe beslissing en bevestig uw aankoop.',
-  'installments.details.step3': 'Leun achterover — betalingen worden automatisch elke maand afgeschreven.',
 
   // Plan
   'installments.plan.paymentSchedule': 'Betalingsschema:',

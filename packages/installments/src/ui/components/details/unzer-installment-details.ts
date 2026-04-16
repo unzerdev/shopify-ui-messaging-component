@@ -150,6 +150,15 @@ export class UnzerInstallmentDetails extends UnzerElement {
     this.emit('close-request');
   }
 
+  private renderBenefitIcon() {
+    return html`
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#4CAF50"/>
+        <path d="M6 11L9.5 14.5L16 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `;
+  }
+
   render() {
     if (!this.selectedPlan) {
       return html`<div class="empty-state">${this.t('installments.details.noSelectedPlan')}</div>`;
@@ -167,7 +176,6 @@ export class UnzerInstallmentDetails extends UnzerElement {
         <!-- 1. Header -->
         <header class="details-header">
           <div class="header-left">
-            ${this.unzerLogoDisplay ? html`<unzer-logo .variant="${this.unzerLogoDisplay === 'unzer-logo' ? 'logo' : this.unzerLogoDisplay}"></unzer-logo>` : ''}
             <span class="header-title">${this.t('installments.details.title')}</span>
           </div>
           <button
@@ -185,6 +193,25 @@ export class UnzerInstallmentDetails extends UnzerElement {
         <p class="description">
           ${this.t('installments.details.description')}
         </p>
+
+        <!-- 2b. Details -->
+        <div class="benefits-section">
+          <h3 class="benefits-title">${this.t('installments.details.detailsTitle')}</h3>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="benefit-icon">${this.renderBenefitIcon()}</span>
+              <span class="benefit-text">${this.t('installments.details.benefit1')}</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">${this.renderBenefitIcon()}</span>
+              <span class="benefit-text">${this.t('installments.details.benefit2')}</span>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">${this.renderBenefitIcon()}</span>
+              <span class="benefit-text">${this.t('installments.details.benefit3')}</span>
+            </li>
+          </ul>
+        </div>
 
         <!-- 3. Purchase Amount -->
         <div class="field-row">
@@ -248,28 +275,6 @@ export class UnzerInstallmentDetails extends UnzerElement {
           </section>
         ` : ''}
 
-        <!-- 7. Next Steps -->
-        <footer class="details-footer">
-          <h3 class="footer-title">${this.t('installments.details.nextSteps')}</h3>
-          <ol class="steps-list">
-            <li class="step">
-              <span class="step-number">1</span>
-              <span class="step-text"
-                >${this.t('installments.details.step1')}</span
-              >
-            </li>
-            <li class="step">
-              <span class="step-number">2</span>
-              <span class="step-text">${this.t('installments.details.step2')}</span>
-            </li>
-            <li class="step">
-              <span class="step-number">3</span>
-              <span class="step-text"
-                >${this.t('installments.details.step3')}</span
-              >
-            </li>
-          </ol>
-        </footer>
       </div>
     `;
   }
